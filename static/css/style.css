@@ -10,13 +10,27 @@ html {
     height: 100%;
 }
 
+a {
+    color: black;
+}
+
 body {
     background: url('/media/main-page.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
     font-family: 'Antic Didone', sans-serif;
 }
+
+/* LOGO */
+
+.logo {
+    color: black;
+}
+
+.logo-span {
+    color: rgb(126, 69, 0);
+}
+
 
 /* from Bulma */
 .icon {
@@ -25,4 +39,8 @@ body {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+.bg-black {
+    background: #000 !important;
 }
