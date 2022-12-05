@@ -19,6 +19,8 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: 'Antic Didone', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 /* LOGO */
@@ -43,4 +45,20 @@ body {
 
 .bg-black {
     background: #000 !important;
+}
+
+.contact-facebook :hover {
+    color: rgba(0, 64, 255, 0.734);
+}
+
+.contact-github :hover {
+    color: rgb(0, 255, 21);
+}
+
+.contact-instagram :hover {
+    color: rgba(221, 0, 255, 0.734);
+}
+
+footer {
+    margin-top: auto;
 }
