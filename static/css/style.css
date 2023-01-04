@@ -23,6 +23,10 @@ body {
     flex-direction: column;
 }
 
+.text-black {
+    color: #000 !important;
+}
+
 /* LOGO */
 
 .logo {
@@ -68,11 +72,10 @@ footer {
 .overlay {
     height: 100%;
     width: 100%;
-    z-index: -1;
     top: 0;
     left: 0;
     position: fixed;
-    background: rgb(182, 182, 182);
+    background: rgb(255, 255, 255);
 }
 
 /*-------------Media Queries--------------*/

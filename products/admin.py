@@ -5,7 +5,7 @@ from .models import Category, Product
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('friendly_name', 'name',)
+    list_display = ('gender', 'friendly_name', 'name',)
 
 
 class ProductAdmin(admin.ModelAdmin):
