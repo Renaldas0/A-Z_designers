@@ -14,15 +14,6 @@ a {
     color: black;
 }
 
-body {
-    background: url('/media/main-page.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    font-family: 'Antic Didone', sans-serif;
-    display: flex;
-    flex-direction: column;
-}
-
 .text-black {
     color: #000 !important;
 }
@@ -67,15 +58,13 @@ footer {
     margin-top: auto;
 }
 
-/* Products page */
-
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: rgb(255, 255, 255);
+.background-img {
+    background: url('/media/main-page.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    font-family: 'Antic Didone', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 /*-------------Media Queries--------------*/

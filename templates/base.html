@@ -54,7 +54,7 @@
                                 <a href="" class="text-capitalize dropdown-item">by price</a>
                                 <a href="" class="text-capitalize dropdown-item">by rating</a>
                                 <a href="" class="text-capitalize dropdown-item">by category</a>
-                                <a href="" class="text-capitalize dropdown-item">all products</a>
+                                <a href="{% url 'products' %}" class="text-capitalize dropdown-item">all products</a>
                             </div>
                         </li>
                         <li class="nav-item list list-inline-item text-uppercase"><a href=""
@@ -165,7 +165,7 @@
 
     {% block content %}
     {% endblock %}
-    <!-- 
+
     <footer id="footer">
         <div class="footer-top text-center text-black bg-white fixed-bottom">
             <h4 class="contact text-capitalize">Contact us</h4>
@@ -182,7 +182,7 @@
             </ul>
         </div>
     </footer>
-    -->
+
 
     {% block postloadjs %}
     {% endblock %}
