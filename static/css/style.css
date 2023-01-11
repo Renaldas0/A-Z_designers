@@ -6,6 +6,10 @@
     margin: 0;
 }
 
+body {
+    font-family: 'Antic Didone', sans-serif;
+}
+
 html {
     height: 100%;
 }
@@ -38,9 +42,13 @@ a {
     width: 1.5rem;
 }
 
+/* ------ General rules for various classes ------- */
+
 .bg-black {
     background: #000 !important;
 }
+
+/* ------------ Social Media Icons --------------*/
 
 .contact-facebook :hover {
     color: rgba(0, 64, 255, 0.734);
@@ -54,6 +62,8 @@ a {
     color: rgba(221, 0, 255, 0.734);
 }
 
+/* ------- Footer ------- */
+
 footer {
     margin-top: auto;
 }
@@ -62,7 +72,6 @@ footer {
     background: url('/media/main-page.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    font-family: 'Antic Didone', sans-serif;
     display: flex;
     flex-direction: column;
 }

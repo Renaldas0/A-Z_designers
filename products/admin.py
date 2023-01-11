@@ -9,7 +9,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'category', 'price', 'rating', 'image',)
+    list_display = ('name', 'category', 'price', 'image',)
 
     ordering = ('category',)
 
