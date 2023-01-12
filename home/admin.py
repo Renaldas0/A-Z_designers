@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+
+@admin.register(Customer)
+class CustomerAdmin(admin.ModelAdmin):
+    """  Customer Admin  """
+    list_display = ('customer_id', 'full_name', 'email',)
