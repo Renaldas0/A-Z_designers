@@ -95,3 +95,10 @@ footer {
 }
 
 /*-------------Media Queries--------------*/
+
+@media screen and (max-width:992px) {}
+
+/* Forms */
+.form-container {
+    top: 25%;
+}
