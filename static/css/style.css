@@ -96,9 +96,14 @@ footer {
 
 /*-------------Media Queries--------------*/
 
-@media screen and (max-width:992px) {}
+@media screen and (max-width:554px) {
+    .logo {
+        font-size: 25px;
+    }
+}
 
-/* Forms */
-.form-container {
-    top: 25%;
+@media screen and (max-width:463px) {
+    .logo {
+        display: none;
+    }
 }
