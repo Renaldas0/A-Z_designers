@@ -34,10 +34,10 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top">
+    <div class="container-fluid fixed-top nav-div">
         <div id="mainnav" class="row pt-lg-2 bg-white d-lg-flex">
             <!-- Main navigation for medium/small devices-->
-            <nav class="navbar navbar-expand-lg header-mainnav col-4 navbar-light">
+            <nav class="navbar navbar-expand-lg header-mainnav col-3 navbar-light">
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -85,13 +85,13 @@
                     </ul>
                 </div>
             </nav>
-            <!-- Logo -->
-            <div class="col-lg-4 col-6 my-auto py-1 py-lg-0 text-center header">
+            <!---------------- Logo ---------------->
+            <header class="col-lg-4 col-6 my-auto py-1 py-lg-0 text-center header">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo logo-font my-0 text-center"><strong><span
                                 class="logo-span">A-Z</span>_Designers</strong></h2>
                 </a>
-            </div>
+            </header>
             <!-- Account / Shopping bag -->
             <div class="header-utilities col-lg-4 text-lg-right my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
@@ -153,7 +153,7 @@
                 </form>
             </div>
         </div>
-    </header>
+    </div>
 
 
     {% if messages %}
