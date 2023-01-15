@@ -7,6 +7,7 @@
 }
 
 body {
+    background-color: rgb(206, 206, 206);
     font-family: 'PT Serif', sans-serif;
 }
 
@@ -92,6 +93,10 @@ footer {
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
     position: relative;
     top: 20%;
+}
+
+.form-link {
+    color: blueviolet;
 }
 
 /*-------------Media Queries--------------*/
