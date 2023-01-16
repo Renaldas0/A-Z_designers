@@ -6,11 +6,15 @@
 
 {% block content %}
 <div class="background-img">
-    <div>
-        <h2 class="text-capitalize"><a href="#">new collections are here</a></h2>
+    <div class="container-fluid">
+        <div>
+            <h2 class="text-capitalize"><a href="#">new collections are here</a></h2>
+        </div>
+        <div class="text-capitalize">
+            <button><a href="{% url 'products' %}" class="text-capitalize text-decoration-none button">shop
+                    now</a></button>
+        </div>
     </div>
-    <div class="text-capitalize">
-        <button><a href="{% url 'products' %}" class="text-capitalize text-decoration-none">shop now</a></button>
-    </div>
+
 </div>
 {% endblock %}
