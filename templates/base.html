@@ -51,7 +51,8 @@
                                 aria-haspopup="true" aria-expanded="false">All
                                 Products</a>
                             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                                <a href="{% url 'products' %}" class="text-capitalize dropdown-item">all products</a>
+                                <a href="{% url 'products' %}?category=womens_t-shirts,womens_trousers,womens_skirts,womens_runners,womens_sandals,bags,mens_tshirts,mens_trousers,mens_joggers,mens_shorts,mens_shoes,mens_runners,mens_watches"
+                                    class="text-capitalize dropdown-item">all products</a>
                                 <a href="" class="text-capitalize dropdown-item">by price</a>
                                 <a href="" class="text-capitalize dropdown-item">by rating</a>
                             </div>
@@ -64,22 +65,32 @@
                                 class="nav-link text-black" id="all-products-link" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Women</a>
                             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                                <a href="" class="text-capitalize dropdown-item">t-shirts</a>
-                                <a href="" class="text-capitalize dropdown-item">trousers</a>
-                                <a href="" class="text-capitalize dropdown-item">skirts</a>
-                                <a href="" class="text-capitalize dropdown-item">shoes</a>
-                                <a href="" class="text-capitalize dropdown-item">bags</a>
+                                <a href="{% url 'products' %}?category=womens_t-shirts"
+                                    class="text-capitalize dropdown-item">t-shirts</a>
+                                <a href="{% url 'products' %}?category=womens_trousers"
+                                    class="text-capitalize dropdown-item">trousers</a>
+                                <a href="{% url 'products' %}?category=womens_skirts"
+                                    class="text-capitalize dropdown-item">skirts</a>
+                                <a href="{% url 'products' %}?category=womens_runners,womens_sandals"
+                                    class="text-capitalize dropdown-item">shoes</a>
+                                <a href="{% url 'products' %}?category=bags"
+                                    class="text-capitalize dropdown-item">bags</a>
                             </div>
                         </li>
                         <li class="nav-item list list-inline-item dropdown text-uppercase"><a href=""
                                 class="nav-link text-black" id="all-products-link" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Men</a>
                             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                                <a href="" class="text-capitalize dropdown-item">t-shirts</a>
-                                <a href="" class="text-capitalize dropdown-item">trousers</a>
-                                <a href="" class="text-capitalize dropdown-item">shorts</a>
-                                <a href="" class="text-capitalize dropdown-item">shoes</a>
-                                <a href="" class="text-capitalize dropdown-item">watches</a>
+                                <a href="{% url 'products' %}?category=mens_tshirts"
+                                    class="text-capitalize dropdown-item">t-shirts</a>
+                                <a href="{% url 'products' %}?category=mens_trousers,mens_joggers"
+                                    class="text-capitalize dropdown-item">trousers</a>
+                                <a href="{% url 'products' %}?category=mens_shorts"
+                                    class="text-capitalize dropdown-item">shorts</a>
+                                <a href="{% url 'products' %}?category=mens_shoes,mens_runners"
+                                    class="text-capitalize dropdown-item">shoes</a>
+                                <a href="{% url 'products' %}?category=mens_watches"
+                                    class="text-capitalize dropdown-item">watches</a>
                             </div>
                         </li>
                     </ul>
