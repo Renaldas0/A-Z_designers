@@ -82,7 +82,17 @@ footer {
 }
 
 .home-container {
-    background-color: rgba(255, 255, 255, 0.6);
+    top: 20%;
+    left: 15%;
+}
+
+.new-collections {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    font-size: 25px;
 }
 
 /*--------- Sign Up Form ---------*/
@@ -104,6 +114,12 @@ footer {
 
 .form-link {
     color: blueviolet;
+}
+
+/*--------- Sign out form ---------*/
+
+.sign-out-container {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*-------------Media Queries--------------*/
