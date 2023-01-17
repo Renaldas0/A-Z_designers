@@ -6,12 +6,14 @@
 
 {% block content %}
 <div class="background-img">
-    <div class="container-fluid">
+    <div class="container-fluid home-container col-6">
         <div>
-            <h2 class="text-capitalize"><a href="#">new collections are here</a></h2>
+            <h2 class="text-capitalize"><a href="{% url 'products' %}?category=bags">new collections are here</a></h2>
         </div>
         <div class="text-capitalize">
-            <button><a href="{% url 'products' %}" class="text-capitalize text-decoration-none button">shop
+            <button><a
+                    href="{% url 'products' %}?category=womens_t-shirts,womens_trousers,womens_skirts,womens_runners,womens_sandals,bags,mens_tshirts,mens_trousers,mens_joggers,mens_shorts,mens_shoes,mens_runners,mens_watches"
+                    class="text-capitalize text-decoration-none button">shop
                     now</a></button>
         </div>
     </div>
