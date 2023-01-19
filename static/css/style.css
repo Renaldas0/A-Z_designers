@@ -53,6 +53,14 @@ a {
     background: #000 !important;
 }
 
+.btt-button {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
 /* ------------ Social Media Icons --------------*/
 
 .contact-facebook :hover {
