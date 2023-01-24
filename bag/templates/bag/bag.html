@@ -40,10 +40,15 @@
                             <p class="my-1">€{{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
+                            <p class="my-1">Size:
+                                {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
+                            </p>
+                        </td>
+                        <td class="py-3 w-25">
                             <p class="my-1">{{ item.quantity }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-1">{{ item.product.price }}</p>
+                            <p class="my-1">€{{ item.product.price }}</p>
                         </td>
                     </tr>
                     {% endfor %}
