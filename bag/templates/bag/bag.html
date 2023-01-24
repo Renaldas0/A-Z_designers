@@ -33,7 +33,7 @@
                             <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="Product image">
                         </td>
                         <td class="py-3">
-                            <h4 class="my-1"><strong>{{ item.product.name }}</strong></h4>
+                            <h5 class="my-1"><strong>{{ item.product.name }}</strong></h5>
                             <p class="my-1 small text-muted">SKU:{{ item.product.sku|upper }}</p>
                         </td>
                         <td class="py-3">
@@ -45,10 +45,10 @@
                             </p>
                         </td>
                         <td class="py-3 w-25">
-                            <p class="my-1">{{ item.quantity }}</p>
+                            <p class="my-1">Quantity: {{ item.quantity }}</p>
                         </td>
                         <td class="py-3">
-                            <p class="my-1">€{{ item.product.price }}</p>
+                            <p class="my-1">Subtotal: €{{ item.product.price }}</p>
                         </td>
                     </tr>
                     {% endfor %}
