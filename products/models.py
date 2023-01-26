@@ -27,6 +27,7 @@ class Product(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     colour = models.CharField(max_length=24, null=True)
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
+    shoe_sizes = models.BooleanField(default=False, null=True, blank=True)
     materials = models.CharField(max_length=254, null=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(null=True, blank=True)

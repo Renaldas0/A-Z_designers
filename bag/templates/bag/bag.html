@@ -19,13 +19,7 @@
             {% if bag_items %}
             <div class="table-responsive rounded">
                 <table class="table table-sm table-borderless">
-                    <th class="text-black">
-                        <tr scope="col">Product Info</tr>
-                        <tr scope="col"></tr>
-                        <tr scope="col">Price</tr>
-                        <tr scope="col">Quantity</tr>
-                        <tr scope="col">Subtotal</tr>
-                    </th>
+
 
                     {% for item in bag_items %}
                     <tr>
@@ -42,6 +36,7 @@
                         <td class="py-3 w-25">
                             <p class="my-1">Size:
                                 {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
+
                             </p>
                         </td>
                         <td class="py-3 w-25">
