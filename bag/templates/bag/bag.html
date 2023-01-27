@@ -45,11 +45,23 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
+                                            <button class="decrement-qty btn border" data-item_id="{{ product.id }}"
+                                                id="decrement-qty_{{ product.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-minus"></i>
+                                                </span>
+                                            </button>
                                         </div>
-                                        <input class="form-control form-control-sm qty_input" type="number"
-                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                        <input class="form-control qty_input" type="number" name="quantity" value="1"
+                                            min="1" max="99" data-item_id="{{ product.id }}"
+                                            id="id_qty_{{ product.id }}">
                                         <div class="input-group-append">
+                                            <button class="increment-qty btn border" data-item_id="{{ product.id }}"
+                                                id="increment-qty_{{ product.id }}">
+                                                <span class="icon">
+                                                    <i class="fas fa-plus"></i>
+                                                </span>
+                                            </button>
                                         </div>
                                         {% if item.product.has_sizes %}
                                         <input type="hidden" name="product_size" value="{{ item.size }}">
@@ -57,7 +69,7 @@
                                     </div>
                                 </div>
                             </form>
-                            <a class="update-link text-warning"><small>Edit</small></a>
+                            <a class="update-link text-warning"><small>Update Changes</small></a>
                             <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
                                 data-size="{{ item.size }}"><small>Remove</small></a>
                         </td>
@@ -117,13 +129,21 @@
 
 {% block postloadjs %}
 {{ block.super }}
+{% include 'products/includes/quantity_input_script.html' %}
+
 <script type="text/javascript">
-    //Remove item on click
+    // Update the quantity of products 
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item on click and reload the page
     $('.remove-item').click(function (e) {
-        var csrfToken = "{{ csrftoken }}";
+        var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
         var size = $(this).data('size');
-        var url = '/bag/remove/${itemId}';
+        var url = `/bag/remove/${itemId}`;
         var data = {
             'csrfmiddlewaretoken': csrfToken,
             'size': size
@@ -133,6 +153,6 @@
             .done(function () {
                 location.reload();
             });
-    });
+    })
 </script>
 {% endblock %}
