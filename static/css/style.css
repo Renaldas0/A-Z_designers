@@ -61,6 +61,23 @@ a {
     right: 10px;
 }
 
+/*  Message Container and Toast  */
+
+.message-container {
+    position: fixed;
+    top: 75px;
+    right: 15px;
+    z-index: 99999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* ------------ Social Media Icons --------------*/
 
 .contact-facebook :hover {
