@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4 text-capitalize text-center">Thank you for shopping with A-Z_Designers</h2>
+            <hr>
+            <p class="text-dark text-center">Your order information is below. Your confirmation email will be sent to
+                <strong>{{ order.email }}</strong></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-7">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-right">
+            <a class="button rounded-1 my-2" href="{% url 'products' %}? category=new_arrivals">
+                <span class="icon">
+                    <i class="fas fa-gifts"></i>
+                </span>
+                <span class="text-capitalize">Check out our <em>newest collections</em>!</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

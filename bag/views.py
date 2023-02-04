@@ -17,10 +17,10 @@ def add_to_bag(request, item_id):
     size = None
     shoe_size = None
 
-    """ Products with sizes  """
+    """ -------------------------------------------Products with sizes  """
     if 'product_size' in request.POST:
         size = request.POST['product_size']
-        """ Shoe sizes  """
+        """ ---------------------------------------------Shoe sizes  """
     elif 'product_shoe_size' in request.POST:
         shoe_size = request.POST['product_shoe_size']
 

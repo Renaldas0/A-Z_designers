@@ -35,7 +35,7 @@ def bag_contents(request):
                     'product': product,
                     'size': size,
                 })
-                """
+                """---------------------------------------------
     else:
         for item_id, item_shoe_data in bag.items():
             if isinstance(item_shoe_data, int):
