@@ -161,6 +161,14 @@
     </div>
     <div class="row">
         <div class="col-12 col-md-10 text-right">
+            {% if from_profile %}
+            <a class="button rounded-1 my-2" href="{% url 'profile' %}">
+                <span class="icon">
+                    <i class="fas fa-angle-left"></i>
+                </span>
+                <span class="text-capitalize">Go back to profile page</span>
+            </a>
+            {% else %}
             <a class="button rounded-1 my-2" href="{% url 'products' %}?category=bags">
                 <span class="icon">
                     <i class="fas fa-gifts"></i>
