@@ -14,7 +14,8 @@ from profiles.models import UserProfile
 class Order(models.Model):
 
     order_number = models.CharField(max_length=32, editable=False, null=False)
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='orders')
     full_name = models.CharField(max_length=64, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     country = CountryField(blank_label='Country *', null=False, blank=False)

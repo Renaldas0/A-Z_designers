@@ -36,7 +36,7 @@
       <a href="{{ signup_url }}" class="form-link">sign up</a> first.{% endblocktrans %}</p>
     {% endif %}
 
-    <form class="login" method="POST" action="{% url 'account_login' %}">
+    <form class="login text-left" method="POST" action="{% url 'account_login' %}">
       {% csrf_token %}
       {{ form|crispy }}
       {% if redirect_field_value %}

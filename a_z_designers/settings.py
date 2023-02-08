@@ -78,6 +78,9 @@ TEMPLATES = [
     },
 ]
 
+# To resolve scrf token issues
+CSRF_TRUSTED_ORIGINS = ['https://8000-renaldas0-azdesigners-9oopqfb2v8v.ws-eu85.gitpod.io']
+
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = [
