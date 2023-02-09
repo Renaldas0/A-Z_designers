@@ -15,7 +15,7 @@ def profile(request):
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Profile has been updated Successfully')
+            messages.success(request, 'Profile updated successfully')
 
     form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -34,7 +34,7 @@ def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
-        f'This is your order made in the past, order number: {order_number}. '
+        f'This is a past confirmation for order number: {order_number}. '
         'A confirmation email was sent on the order date.'
     ))
 
