@@ -86,6 +86,16 @@
                                                 class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}</a>
                                     </p>
                                     {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-2">
+                                        <a class="text-warning button my-2"
+                                            href="{% url 'edit_product' product.id %}">Edit
+                                            Product</a>
+                                        <a class="text-danger button my-2"
+                                            href="{% url 'delete_product' product.id %}">Delete
+                                            Product</a>
+                                    </small>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

@@ -38,6 +38,16 @@
                 {% endif %}
                 <p class="mt-2">Materials: {{ product.materials }}</p>
                 <p class="mt-2">Colour: {{ product.colour }}</p>
+                <p class="mt-2">{{ product.description }}</p>
+                <!---------------------------------------------Edit and remove product options-->
+                {% if request.user.is_superuser %}
+                <small class="ml-2">
+                    <a class="button text-warning my-2" href="{% url 'edit_product' product.id %}">Edit
+                        Product</a>
+                    <a class="button text-danger my-2" href="{% url 'delete_product' product.id %}">Delete
+                        Product</a>
+                </small>
+                {% endif %}
                 <!--  Form taking in the product to the bag and selecting the quantity  -->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
