@@ -1,0 +1,20 @@
+Confirmation Number: {{ order.order_number }}
+Hello {{ order.full_name }},
+
+We’re happy to let you know that we’ve received your order.
+Ordered on: {{ order.date }}
+
+Once your package ships, we will send you an email with a tracking number and link so you can see the movement of your package.
+
+Details of your order: 
+Order total : €{{ order.order_total }}
+Delivery cost : €{{ order.delivery_cost }}
+Grand total : €{{ order.grand_total }}
+
+Your order will be shipped to {{ order.address }} in {{ order.city }}, {{ order.country }}.
+
+If you have any questions, contact us here or call us on [contact number]!
+
+We are here to help!
+
+Returns: If you would like to return your product(s), please see here [link] or contact us.
