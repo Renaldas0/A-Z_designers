@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% block page_header %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <hr>
+            <h2 class="logo-font mb-4 text-capitalize text-center">Manage Products</h2>
+            <h4 class="text-dark">Add Products</h4>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <form class="form mb-2" method="POST" action="{ url 'add_product' }" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form  | crispy }}
+                <div class="text-right">
+                    <a class="button btn-outlibe-black rounded-1" href="{% url 'products' %}">Go back</a>
+                    <button class="button btn-black rounded-1 text-capitalize" type="submit">Add new product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

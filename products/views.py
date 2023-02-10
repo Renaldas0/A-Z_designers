@@ -3,11 +3,12 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
+from .forms import ProductForm
 
 
 def all_products(request):
-    """ View that shows ALL PRODUCTS, including sorting and search queries """
-   
+    # View that shows ALL PRODUCTS, including sorting and search queries 
+
     products = Product.objects.all()
     query = None
     categories = None
@@ -15,7 +16,7 @@ def all_products(request):
     direction = None
 
     if request.GET:
-        """ Sorting for the all products search result """
+        # Sorting for the all products search result
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey
@@ -31,13 +32,13 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
 
-        """ Search by category and urls """
+        # Search by category and urls
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             category = Category.objects.filter(name__in=categories)
 
-        """ Search by search bar """
+        # Search by search bar
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -60,8 +61,8 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ View that shows INDIVIDUAL PRODUCTS """
-   
+    # View that shows INDIVIDUAL PRODUCTS 
+
     product = get_object_or_404(Product, pk=product_id)
 
     context = {
@@ -69,3 +70,14 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
