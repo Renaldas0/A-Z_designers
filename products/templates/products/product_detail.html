@@ -67,21 +67,6 @@
                         </div>
                         {% endif %}
                         {% endwith %}
-                        <!-- Display Shoe sizes -->
-                        {% with product.shoe_sizes as shoe %}
-                        {% if shoe %}
-                        <div class="col-12">
-                            <p><strong>Size (EU):</strong></p>
-                            <select class="form-control rounded-0 w-50" name="shoe_size" id="id_shoe_size">
-                                <option value="EU37">37</option>
-                                <option value="EU38" selected>38</option>
-                                <option value="EU39">39</option>
-                                <option value="EU40">40</option>
-                                <option value="EU41">41</option>
-                                <option value="EU42">42</option>
-                            </select>
-                        </div>
-                        {% endif %}
                         <!-- Display quantity selection -->
                         <div class="col-12">
                             <p class="mt-2"><strong>Quantity:</strong></p>
@@ -120,7 +105,6 @@
                             <input class="button rounded-0 text-uppercase mt-3" type="submit" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        {% endwith %}
                     </div>
                 </form>
             </div>

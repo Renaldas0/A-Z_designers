@@ -1,0 +1,1 @@
+web: gunicorn a_z_designers.wsgi:application

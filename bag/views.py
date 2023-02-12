@@ -15,14 +15,10 @@ def add_to_bag(request, item_id):
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     size = None
-    shoe_size = None
 
     """ -------------------------------------------Products with sizes  """
     if 'product_size' in request.POST:
         size = request.POST['product_size']
-        """ ---------------------------------------------Shoe sizes  """
-    elif 'product_shoe_size' in request.POST:
-        shoe_size = request.POST['product_shoe_size']
 
     """ stores items in the bag even when user is still browsing"""
     bag = request.session.get('bag', {})
@@ -38,19 +34,6 @@ def add_to_bag(request, item_id):
         else:
             bag[item_id] = {'items_by_size': {size: quantity}}
             messages.success(request, f'{product.name}, size : {size.upper()} has been added to your bag!')
-
-    elif shoe_size:
-        """ Shoe Sizes """
-        if item_id in list(bag.keys()):
-            if shoe_size in bag[item_id]['items_by_shoe_size'].keys():
-                bag[item_id]['items_by_shoe_size'][shoe_size] += quantity
-                messages.success(request, f'Updated size {shoe_size.upper()} {product.name} quantity to {bag[item_id]["items_by_shoe_size"][shoe_size]}')
-            else:
-                bag[item_id]['items_by_shoe_size'][shoe_size] = quantity
-                messages.success(request, f'{product.name}, size : {shoe_size.upper()} has been added to your bag!')
-        else:
-            bag[item_id] = {'items_by_shoe_size': {shoe_size: quantity}}
-            messages.success(request, f'{product.name}, size : {shoe_size.upper()} has been added to your bag!')
 
     else:
         if item_id in list(bag.keys()):
@@ -76,7 +59,7 @@ def edit_bag(request, item_id):
     """ stores items in the bag even when user is still browsing"""
     bag = request.session.get('bag', {})
 
-    if size: 
+    if size:
         if quantity > 0:
             bag[item_id]['items_by_size'][size] = quantity
             messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
