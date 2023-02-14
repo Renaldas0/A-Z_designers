@@ -24,6 +24,7 @@ class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField()
+    key_words = models.TextField(blank=True)
     sku = models.CharField(max_length=254, null=True, blank=True)
     colour = models.CharField(max_length=24, null=True)
     has_sizes = models.BooleanField(default=False, null=True, blank=True)
