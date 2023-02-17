@@ -9,7 +9,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('sku', 'name', 'category', 'description', 'key_words', 'price', 'image',)
+    list_display = ('sku', 'name', 'category', 'description', 'key_words',
+                    'price', 'image',)
 
     ordering = ('sku',)
 

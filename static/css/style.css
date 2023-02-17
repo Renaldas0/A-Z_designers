@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(255, 255, 255);
     font-family: 'PT Serif', sans-serif;
     height: calc(100vh - 164px);
 }
@@ -199,7 +199,23 @@ select option [value=""] {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+.remove-item {
+    float: right;
+}
+
 /*-------------Media Queries--------------*/
+
+@media screen and (max-width:991px) {
+    .remove-item {
+        float: left;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .remove-item {
+        float: right;
+    }
+}
 
 @media screen and (max-width:554px) {
     .logo {

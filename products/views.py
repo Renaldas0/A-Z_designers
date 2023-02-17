@@ -8,7 +8,7 @@ from .forms import ProductForm
 
 
 def all_products(request):
-    # View that shows ALL PRODUCTS, including sorting and search queries 
+    # View that shows ALL PRODUCTS, including sorting and search queries
 
     products = Product.objects.all()
     query = None
@@ -62,7 +62,7 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    # View that shows INDIVIDUAL PRODUCTS 
+    # View that shows INDIVIDUAL PRODUCTS
 
     product = get_object_or_404(Product, pk=product_id)
 
@@ -84,10 +84,12 @@ def add_product(request):
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'Product has been added to the database!')
+            messages.success(request,
+                             'Product has been added to the database!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Double check the form.')
+            messages.error(request,
+                           'Failed to add product. Double check the form.')
     else:
         form = ProductForm()
 
@@ -115,7 +117,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Product details updated successfully!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Double check the form.')
+            messages.error(request,
+                           'Failed to update product. Double check the form.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'Editing: {product.name}')

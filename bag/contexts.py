@@ -3,7 +3,8 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
-"""The purpose of this 'context processor' is to make this dictionary available to all templates across the whole application"""
+"""The purpose of this 'context processor' is to make this dictionary
+available to all templates across the whole application"""
 
 
 def bag_contents(request):

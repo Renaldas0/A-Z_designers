@@ -8,10 +8,12 @@ from django_countries.fields import CountryField
 
 class UserProfile(models.Model):
     """
-    user profile to store user information such as purchases made and delivery/billing information
+    user profile to store user information
+    such as purchases made and delivery/billing information
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    default_country = CountryField(blank_label='Country', null=True, blank=True)
+    default_country = CountryField(blank_label='Country',
+                                   null=True, blank=True)
     default_city = models.CharField(max_length=36, null=True, blank=True)
     default_address = models.CharField(max_length=254, null=True, blank=True)
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
