@@ -201,8 +201,6 @@ select option [value=""] {
 
 /*-------------Media Queries--------------*/
 
-@media screen and (max-width:991px) {}
-
 @media screen and (max-width:554px) {
     .logo {
         font-size: 25px;

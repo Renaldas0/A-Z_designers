@@ -18,6 +18,49 @@
     <div class="row">
         <div class="col">
             {% if bag_items %}
+            <div class="d-block d-md-none">
+                <div class="row">
+                    <div class="col">
+                        {% include "bag/bag-total.html" %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        {% include "bag/checkout-buttons.html" %}
+                        <p class="text-muted mb-5">Shopping bag contents are below</p>
+                    </div>
+                </div>
+                {% for item in bag_items %}
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        {% include "bag/product-image.html" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% include "bag/product-information.html" %}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <p class="my-0"><strong>Product Price: </strong>€{{ item.product.price }}</p>
+                        <p class="my-0"><strong>Subtotal:
+                            </strong>€{{ item.product.price | calculate_subtotal:item.quantity }}</p>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        {% include "bag/product-qty-form.html" %}
+                    </div>
+                </div>
+                <!--Horizontal rule dividing each product-->
+                <div class="row">
+                    <div class="col">
+                        <hr>
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- Arrow to scroll up to the top of the page -->
+                <div class="btt-button shadow-sm rounded-2 border border-black">
+                    <a class="btt-link d-flex h-100">
+                        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+                    </a>
+                </div>
+            </div>
             <div class="table-responsive rounded d-none d-md-block">
                 <table class="table table-sm table-borderless">
                     <thead class="text-black">
@@ -40,7 +83,7 @@
                             {% include "bag/product-qty-form.html" %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price | calculate_subtotal:item.quantity }}</p>
+                            <p class="my-0">€{{ item.product.price | calculate_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
@@ -72,6 +115,12 @@
 
 {% block postloadjs %}
 {{ block.super }}
+<!-- On click function to scroll to the top of the page -->
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
 {% include 'products/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
