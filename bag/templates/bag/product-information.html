@@ -1,0 +1,6 @@
+<h5 class="my-1"><strong>{{ item.product.name }}</strong></h5>
+<p class="my-1 small text-muted">SKU:{{ item.product.sku|upper }}</p>
+<p class="my-1">Size:
+    {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
+</p>
+<p>€{{ item.product.price }}</p>

@@ -9,6 +9,7 @@
 body {
     background-color: rgb(248, 248, 248);
     font-family: 'PT Serif', sans-serif;
+    height: calc(100vh - 164px);
 }
 
 html {
@@ -158,19 +159,13 @@ select option [value=""] {
 .background-img {
     background: url('/media/main-page.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .home-container {
-    top: 20%;
-    left: 15%;
-}
-
-.new-collections {
-    font-size: 40px;
-    margin-bottom: 20px;
+    top: 30%;
 }
 
 .btn-primary {
@@ -206,6 +201,8 @@ select option [value=""] {
 
 /*-------------Media Queries--------------*/
 
+@media screen and (max-width:991px) {}
+
 @media screen and (max-width:554px) {
     .logo {
         font-size: 25px;
@@ -215,5 +212,33 @@ select option [value=""] {
 @media screen and (max-width:463px) {
     .logo {
         font-size: 16px;
+    }
+
+    .input-group-append {
+        display: none;
+    }
+
+    .input-group-prepend {
+        display: none;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .home-container {
+        top: 15%;
+    }
+
+    .btn-primary {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .btn-primary {
+        font-size: 16px;
+    }
+
+    .delivery-text {
+        font-size: 12px;
     }
 }

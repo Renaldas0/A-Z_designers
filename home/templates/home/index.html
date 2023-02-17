@@ -5,21 +5,19 @@
 {% endblock %}
 
 {% block content %}
-<div class="background-img">
+<div class="background-img position-relative">
     <div class="row bg-black">
-        <div class="col-12 text-center text-capitalize text-light">free delivery on orders over
+        <div class="col-12 text-center text-capitalize text-light delivery-text">free delivery on orders over
             <em>€{{ free_delivery_threshold }}!</em></div>
     </div>
-    <div class="container-fluid home-container col-3 position-absolute">
-        <div>
-            <h2 class="text-capitalize new-collections">our new collections are here</h2>
-        </div>
-        <div class="text-capitalize">
-            <a href="{% url 'products' %}?category=bags" class="text-decoration-none"><button
-                    class="btn btn-primary text-capitalize">shop
-                    now</button></a>
+    <div class="row col-12">
+        <div class="container-fluid home-container position-absolute col-md-4 col-xs-6 text-center">
+            <div class="text-capitalize">
+                <a href="{% url 'products' %}?category=bags" class="text-decoration-none"><button
+                        class="button btn-primary text-capitalize">shop
+                        new arrivals</button></a>
+            </div>
         </div>
     </div>
-
 </div>
 {% endblock %}

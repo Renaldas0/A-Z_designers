@@ -51,6 +51,9 @@
                 <!-- Main navigation for larger devices -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="text-left navbar-nav mr-auto">
+                        <li class="d-block d-md-none nav-item">
+                            <a class="nav-link text-black" href="{% url 'home' %}">Home</a>
+                        </li>
                         <li class="nav-item list list-inline-item dropdown text-uppercase"><a href=""
                                 class="nav-link text-black" id="all-products-link" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">All
@@ -172,21 +175,21 @@
         </div>
     </div>
 
-
     {% if messages %}
-    {% for message in messages %}
-    {% with message.level as level %}
-    {% if level == 40 %}
-    {% include 'toasts/toast_error.html' %}
-    {% elif level == 30 %}
-    {% include 'toasts/toast_warning.html' %}
-    {% elif level == 25 %}
-    {% include 'toasts/toast_success.html' %}
-    {% else %}
-    {% include 'toasts/toast_info.html' %}
-    {% endif %}
-    {% endwith %}
-    {% endfor %}
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'toasts/toast_success.html' %}
+        {% else %}
+        {% include 'toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
     </div>
     {% endif %}
 
