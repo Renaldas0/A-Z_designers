@@ -41,7 +41,8 @@ class Migration(migrations.Migration):
             name='OrderLineItem',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True,
-                                           serialize=False, verbose_name='ID')),
+                                           serialize=False,
+                                           verbose_name='ID')),
                 ('product_size', models.CharField(blank=True, max_length=2,
                                                   null=True)),
                 ('shoe_size', models.CharField(blank=True, max_length=2,
