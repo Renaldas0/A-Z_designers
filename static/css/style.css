@@ -203,6 +203,20 @@ select option [value=""] {
     float: right;
 }
 
+/* --------------------ERROR 404 BACKGROUND ---------*/
+
+.error-bg-container {
+    background: url('/media/empty-room.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.error-text-bg {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 /*-------------Media Queries--------------*/
 
 @media screen and (max-width:991px) {

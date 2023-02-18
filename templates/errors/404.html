@@ -1,23 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-7 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-black">
+<div class="row h-100">
+    <div class="error-bg-container">
+        <div class="col-10 my-auto float-center error-text-bg">
+            <h1 class="display-4 logo-font text-black">404</h1>
+            <h2 class="display-4 logo-font text-black">
                 Uh Oh, the page you are looking for is not found... Please Check your spelling and try again
-            </h1>
+            </h2>
             <div class="my-5">
                 <h4>
-                    <a href="{% url 'products' %}"
-                        class="shop-now-button button btn-lg rounded-1 text-uppercase py-3">Go back Home
-                        <span class="icon mx-1">
-                            <i class="fa-solid fa-arrow-down-right"></i>
+                    <a href="{% url 'products' %}" class="button btn-lg rounded-1 text-uppercase py-3">Go back Home
+                        <span class="icon ml-2">
+                            <i class="fas fa-arrow-left"></i>
                         </span>
                     </a>
                 </h4>
@@ -25,4 +20,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}
