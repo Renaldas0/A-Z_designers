@@ -11,11 +11,13 @@
             <em>€{{ free_delivery_threshold }}!</em></div>
     </div>
     <div class="row col-12">
-        <div class="container-fluid home-container position-absolute col-md-4 col-xs-6 text-center">
+        <div class="container-fluid home-container position-absolute col-md-8 col-xs-6 text-center">
             <div class="text-capitalize">
-                <a href="{% url 'products' %}?category=bags" class="text-decoration-none"><button
+                <h3 class="text-capitalize new-arrivals"><strong class="text-light">Find our Newest collections
+                        here!</strong></h3>
+                <a href="{% url 'products' %}?category=new_arrivals" class="text-decoration-none"><button
                         class="button btn-primary text-capitalize">shop
-                        new arrivals</button></a>
+                        new arrivals!<span class="icon mx-2"><i class="fa-solid fa-truck"></i></span></button></a>
             </div>
         </div>
     </div>

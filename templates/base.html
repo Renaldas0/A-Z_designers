@@ -54,12 +54,12 @@
                         <li class="d-block d-md-none nav-item">
                             <a class="nav-link text-black" href="{% url 'home' %}">Home</a>
                         </li>
-                        <li class="nav-item list list-inline-item dropdown text-uppercase"><a href=""
+                        <li class="nav-item list list-inline-item dropdown text-uppercase"><a
                                 class="nav-link text-black" id="all-products-link" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">All
                                 Products</a>
                             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                                <a href="{% url 'products' %}?category=womens_t-shirts,womens_trousers,womens_skirts,bags,mens_tshirts,mens_trousers,mens_joggers,mens_shorts,mens_watches"
+                                <a href="{% url 'products' %}?category=womens_t-shirts,womens_trousers,womens_skirts,bags,mens_tshirts,mens_trousers,mens_joggers,mens_shorts,mens_watches,new_arrivals"
                                     class="text-capitalize dropdown-item">all products</a>
                                 <a href="{% url 'products' %}?sort=price&direction=asc"
                                     class="text-capitalize dropdown-item">by price</a>
@@ -70,10 +70,10 @@
                             </div>
                         </li>
                         <li class="nav-item list list-inline-item text-uppercase"><a
-                                href="{% url 'products' %}?category=bags" class="nav-link text-black">New
+                                href="{% url 'products' %}?category=new_arrivals" class="nav-link text-black">New
                                 Arrivals</a>
                         </li>
-                        <li class="nav-item list list-inline-item dropdown text-uppercase"><a href=""
+                        <li class="nav-item list list-inline-item dropdown text-uppercase"><a
                                 class="nav-link text-black" id="all-products-link" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">Women</a>
                             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
