@@ -212,16 +212,14 @@ select option [value=""] {
     float: right;
 }
 
-/* --------------------ERROR 404 BACKGROUND ---------*/
+/*--------------------404 PAGE BACKGROUND*/
 
-.error-bg-img {
-    background-image: linear-gradient(rgb(112, 112, 112), rgb(241, 241, 241));
+.error-bg {
+    background: url('/media/empty-room.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-.error-text-bg {
-    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /*-------------Media Queries--------------*/
@@ -265,10 +263,6 @@ select option [value=""] {
 
     .btn-primary {
         font-size: 20px;
-    }
-
-    .error-text {
-        font-size: 35px;
     }
 }
 
