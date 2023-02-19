@@ -215,7 +215,7 @@ select option [value=""] {
 /* --------------------ERROR 404 BACKGROUND ---------*/
 
 .error-bg-img {
-    background-image: linear-gradient(rgb(3rgb(233, 233, 233) 34), yellow);
+    background-image: linear-gradient(rgb(112, 112, 112), rgb(241, 241, 241));
     display: flex;
     flex-direction: column;
 }
@@ -265,6 +265,10 @@ select option [value=""] {
 
     .btn-primary {
         font-size: 20px;
+    }
+
+    .error-text {
+        font-size: 35px;
     }
 }
 
