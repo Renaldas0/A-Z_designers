@@ -215,9 +215,7 @@ select option [value=""] {
 /* --------------------ERROR 404 BACKGROUND ---------*/
 
 .error-bg-img {
-    background: url('/media/empty-room.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
+    background: url('/media/empty-room.jpg') no-repeat center center;
     display: flex;
     flex-direction: column;
 }
