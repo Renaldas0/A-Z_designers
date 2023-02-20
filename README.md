@@ -1,14 +1,14 @@
-# Improve Your Golf
+# A-Z_Designers
 
-### [Improve Your Golf](https://improve-your-golf.herokuapp.com/) is a full stack website developed to be a website that takes bookings for golf lessons. The user must create an account to be able to make bookings for classes, then they are able to change or delete their placed bookings.
+### [A-Z_Designers](https://a-z-designers.herokuapp.com/) is a full stack E-Commerce website developed to be a website for an online clothing store. This website allows users to purchase clothing that is in stock as Anonymous users and even create an account which allows them to save shipping/billing details and previous orders.
 
 ![responsive](https://user-images.githubusercontent.com/97538312/203823455-a1f9d1d8-3687-4b54-a6a1-2b5d1a8e8026.jpg)
   
 ##  **Purpose**
-  - The purpose of this website is to provide information about our studio and encourage golfers of all age groups to try out our lessons that will improve their golf.
+  - The purpose of this E-Commerce website is to connect users with a retail business in which the user can purchase designer clothing online efficiently from the comfort of their home.
 
 ## Agile Methodology
-  - Use of Github Issues and User Stories
+  - Use of Github Issues and User Stories is involved as part of Agile methodology
   ![user_stories](https://user-images.githubusercontent.com/97538312/204099265-eb4c50b9-ed7d-4d70-b27c-5a2d807fd17e.jpg)
 
 
