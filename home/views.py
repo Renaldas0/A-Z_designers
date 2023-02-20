@@ -19,3 +19,9 @@ def sign_up(request):
     else:
         form = Customer()
         return render(request, 'signup.html', {'form': form})
+
+
+def newsletter(request):
+    """ A view to return the newsletter page"""
+    template = 'home/newsletter.html'
+    return render(request, template)
