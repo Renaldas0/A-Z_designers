@@ -264,10 +264,6 @@ select option [value=""] {
     .btn-primary {
         font-size: 20px;
     }
-
-    .error-text {
-        font-size: 25px;
-    }
 }
 
 @media screen and (max-width:300px) {
