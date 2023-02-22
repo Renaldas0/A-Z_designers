@@ -22,7 +22,7 @@
             <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2"
                 enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ form  | crispy }}
+                {{ form | crispy }}
                 <div class="text-right">
                     <a class="button btn-outlibe-black rounded-1" href="{% url 'products' %}">Go back</a>
                     <button class="button btn-black rounded-1 text-capitalize" type="submit">Update product</button>
