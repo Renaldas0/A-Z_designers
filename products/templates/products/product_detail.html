@@ -38,7 +38,7 @@
                 {% endif %}
                 <p class="mt-2">Materials: {{ product.materials }}</p>
                 <p class="mt-2">Colour: {{ product.colour }}</p>
-                <p class="mt-2">{{ product.description }}</p>
+                <p class="mt-2">Product description: {{ product.description }}</p>
                 <!---------------------------------------------Edit and remove product options-->
                 {% if request.user.is_superuser %}
                 <small class="ml-2">
@@ -107,9 +107,54 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
+                <hr>
+                <!-------------------Ratings and reviews-->
+                <div class="tab-pane mt-2" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                    <ul class="reviews">
+                        <h6 class="text-uppercase text-center">Reviews</h6>
+                        {% for review in product.reviews.all %}
+                        <li>
+                            <div class="review-heading">
+                                <h5 class="name text-capitalize">Username: <strong>{{ review.user.username }}</strong>
+                                </h5>
+                                <p class="date">Date: <strong>{{ review.date }}</strong></p>
+                                <div class="review-rating px-1">
+                                    {% autoescape off %}
+                                    Rating: {{ review.rating}}/5
+                                    {% endautoescape %}
+                                </div>
+                            </div>
+                            <div class="review-body border p-1">
+                                <p>Comment: {{ review.review }}</p>
+                            </div>
+                        </li>
+                        <hr>
+                        {% empty %}
+                        <li>This product does not yet have any reviews. You can be the first!</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <!---------------------------------Review Form-->
+                    <form class="review-form" method="GET" action="/review">
+                        {% for product in products %}
+                        <input type="hidden" name="prod_id" id="prod_id" value="{{ product.id }}">
+                        {% endfor %}
+                        <div class="form-group">
+                            <textarea class="input mt-3" name="review" type="text"
+                                placeholder="Leave your review!"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-rating">
+                                <p class="text-uppercase font-weight-bold">Your rating: </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 {% endblock %}

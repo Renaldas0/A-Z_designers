@@ -1,7 +1,12 @@
 from django.contrib import admin
-from .models import Category, Product
+from .models import Category, Product, Review
 
 # Register your models here.
+
+
+class ReviewInline(admin.TabularInline):
+    """Tabular Inline View for Product Reviews"""
+    model = Review
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -11,6 +16,10 @@ class CategoryAdmin(admin.ModelAdmin):
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('sku', 'name', 'category', 'description', 'key_words',
                     'price', 'image',)
+
+    inlines = [
+        ReviewInline,
+    ]
 
     ordering = ('sku',)
 

@@ -3,8 +3,9 @@ from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
-from .models import Product, Category
-from .forms import ProductForm
+from django.views.generic import FormView
+from .models import Product, Category, Review
+from .forms import ProductForm, ReviewForm
 
 
 def all_products(request):
@@ -143,3 +144,56 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+class ProductReview(FormView):
+    """Displayed on product detail, used to add reviews"""
+    template_name = 'products/product_detail.html'
+    form_class = ReviewForm
+    model = Review
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        # make sure the user is logged in first
+        if self.request.user.is_authenticated:
+            # check to see if user has already posted review for product
+            user_has_reviewed = Review.objects.filter(
+                product=self.object).filter(user=self.request.user)
+            # if no object was returned then user has not submitted a review
+            if not user_has_reviewed:
+                context['display_form'] = True
+
+        # passthrough form for rendering in template
+        context['form'] = ReviewForm()
+
+        # get average review rating and pass through to template
+        product_rating = Review.objects.filter(
+            product=self.object).aggregate(Avg('rating'))
+
+        context['product_rating'] = product_rating['rating__avg']
+        return context
+
+    def post(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return HttpResponseForbidden()
+
+        form = self.form_class(request.POST)
+
+        # store the product id passed through the url(defined as pk in urls.py)
+        self.pk = kwargs.get('pk')
+
+        if form.is_valid():
+            # foreign key objects not yet added, prevent saving and add them
+            review = form.save(commit=False)
+            review.product = get_object_or_404(Product, pk=product_id)
+            review.user = self.request.user
+            review.save()
+            messages.success(request, 'Review submitted successfully!')
+            return redirect(reverse('product_detail', args=[product.id]))
+
+        else:
+            messages.error(request,
+                           'Failed to submit review. Please Double check your form.')
+
+        return super().post(request, *args, **kwargs)

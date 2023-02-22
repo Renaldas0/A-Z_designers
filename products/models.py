@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 
 
 class Category(models.Model):
@@ -34,4 +35,35 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
+        """return product name by default"""
         return self.name
+
+    def review_count(self):
+        """Return total reviews for product"""
+        count = self.reviews.aggregate(
+            count=models.Count('rating'))['count']
+
+        if count is None:
+            count = 0
+
+        return count
+
+
+class Review(models.Model):
+    # Model for customers to leave a review
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='reviews')
+    RATING_CHOICES = (
+        (1, '1'),
+        (2, '2'),
+        (3, '3'),
+        (4, '4'),
+        (5, '5'),
+    )
+    rating = models.IntegerField(choices=RATING_CHOICES, default=3)
+    review = models.TextField()
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.review
