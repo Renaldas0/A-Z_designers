@@ -56,28 +56,45 @@ To test website functionality, please find account details below.
 ## **Features**
 
 - **User Features** 
-  - Fully functioning front end website for users to get information on about the lessons
+  - Fully functioning front end website for users to view products for sale
   - Ability to register an account and login/logout.
-  - Ability for users to place bookings for their desired class
-  - Ability for users to change or cancel their bookings
-  - The layout of certain sections changes, dpending if a user is logged in or not.
+  - Ability for users to place products into their shopping bag
+  - Ability for users to edit quantity of items and remove items directly in the bag
   - Fully responsive design using bootstrap and media queries for user on all devices.
+  
+#### Accounts
+
+This is where all customer information is retained via the custom user model. I also made the decision to use Django-allauth which added the ability to override the username field, using the email address as the login. It also brought with it the ability to verify email addresses and reset passwords.
+
+I created personalised Login, Sign Up, Sign out, forms with the help of crispy forms.
+Crispy forms was installed using pip3 install django-crispy-forms and then add this to the apps section in settings.py
+
+I then also created personalised email confirmation, and email verification templates.
+  
+### Profiles
+Users who create accounts can store their shipping and billing informtion for a faster shopping experience using the profiles custom model. This takes in some basic information from the user when the user is completing their checkout form.
+This also allows the users to see their order history.
+
 
 - **Admin Features**
   - As an admin only I have the ability to login to the admin panel
-  - Admin is able to see all placed reservations and control them
-  - Admin is able to see all customer input details
-  - Admin can see who placed the reservations by their login details
-  - Most importantly the admin can update or delete all reservations
+  - Admin is able to see all orders made by users
+  - Admin is able to see all customer details
+  - Admin can create, edit or delete products directly from the website or admin panel
+
 
 - **Site Features**
-  - The site is developed to be a single scroll page except for the register and login forms
-  - The main section loads up with an image displaying the theme of the website (golf) and the title clearly visible to users
-  - The navbar is compact into a hamburger menu icon and is transparent if the page is at the complete top
-  - Once the user scrolls for better user experience, the navbar is set to always be visible and a background colour appears using JavaScript
-  - For extra functionality there is a button which if clicked simply scrolls down to the About Us section
-  - Clicking on sections in the navbar scrolls the page down to that desired section
-  - Clicking on the heading will also scroll the page back up to the top
+  - The home page is a clear landing page that shows this is a cclothing ecommerce store
+  - The navbar becomes compact into a hamburger menu icon for smaller screen devices
+  - Full navigation of products and filtering can be done in the navigation menu
+  - Accounts can also be accessed in the navigation 
+  - The users shopping bag updates when products are added to the bag
+  - For extra functionality there is a button which if clicked simply scrolls up to the top of the page in the products section
+  - Clicking on sections in the navbar opens up the desired page/ category of clothing
+  - Clicking on the heading will take the user back to the home page
+  
+ -**Stripe**
+  - Stripe is used to handle paayments on this website
   
 ## Main section
 ![main-screenshot](https://user-images.githubusercontent.com/97538312/201192933-98a6b956-1bc9-43e9-84d8-8ba22933ffd2.jpg)
