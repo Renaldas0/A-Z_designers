@@ -5,7 +5,7 @@
 <div class="container header-container">
     <div class="row">
         <div class="col">
-            <h2>Reviews for {{{ product.name }}</h2>
+            <h2>Reviews for {{ product.name }}</h2>
         </div>
     </div>
 </div>
@@ -17,7 +17,8 @@
             <div class="card h-100">
                 <div class="card-body">
                     <h3 class="card-title brand-font-alt h6">Product: {{ product.name }}</h3>
-                    <p><small class="text-muted p-0"><em>Posted by {{ review.user.username }} on {{ review.date }}</em></small></p>
+                    <p><small class="text-muted p-0"><em>Posted by {{ review.user.username }} on
+                                {{ review.date }}</em></small></p>
                     <p class="card-text">{{ review.review }}</p>
                     {% if request.user.is_superuser %}
                     <div class="text-center">
@@ -45,7 +46,8 @@
     <!-- Message displays if there are no featured or available reviews -->
     <div class="col">
         <p>No reviews available for this product yet.</p>
-        <p class="alt-text-muted h5">Share your experience of using the products with your fellow K-Beauty enthusiasts</p>
+        <p class="alt-text-muted h5">Share your experience of using the products with your fellow K-Beauty enthusiasts
+        </p>
     </div>
     {% endif %}
 </div>
