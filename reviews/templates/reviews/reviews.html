@@ -9,4 +9,44 @@
         </div>
     </div>
 </div>
+{% if reviews %}
+<div class="container-fluid">
+    <div class="row">
+        {% for review in reviews %}
+        <div class="col-12 col-md-6 col-lg-3 mt-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="card-title brand-font-alt h6">Product: {{ product.name }}</h3>
+                    <p><small class="text-muted p-0"><em>Posted by {{ review.user.username }} on {{ review.date }}</em></small></p>
+                    <p class="card-text">{{ review.review }}</p>
+                    {% if request.user.is_superuser %}
+                    <div class="text-center">
+                        <div class="container d-flex justify-content-center mt-2 mb-2">
+                            <a class="button mb-3 mx-2" href="{% url 'edit_review' review.id %}">
+                                Edit
+                            </a>
+                            <button class="button btn-red mb-3 mx-2">Delete</button>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="card-footer">
+                    <!-- Prompts site users/ visitors to add their review if they use current product -->
+                    <p><em>Have you used {{ product.name }} before?</em></p>
+                    <a href="{% url 'add_review' product.id %}" class="btn btn-sm btn-black rounded-0 text-shadow">
+                        Share your experience!
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <!-- Message displays if there are no featured or available reviews -->
+    <div class="col">
+        <p>No reviews available for this product yet.</p>
+        <p class="alt-text-muted h5">Share your experience of using the products with your fellow K-Beauty enthusiasts</p>
+    </div>
+    {% endif %}
+</div>
 {% endblock %}

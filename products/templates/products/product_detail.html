@@ -117,8 +117,33 @@
             </div>
         </div>
     </div>
+    <!------------------- Link to Ratings and reviews -->
+    <div class="row">
+        <div class="col-12">
+            <h4 class="text-center">Reviews</h4>
+            {% if reviews %}
+            <a href="{% url 'reviews' product.id %}" class="btn btn-black rounded-0 text-uppercase mt-1">
+                <span class="text-uppercase">See All Reviews</span>
+                <span class="icon">
+                    <i class="fas fa-chevron-right"></i>
+                </span>
+            </a>
+            {% else %}
+            <p>This product doesn't have any reviews yet. Be the first!<span class="icon"><i
+                        class="fas fa-arrow-down"></i></span></p>
+            {% endif %}
+            <div class="col">
+                <a href="{% url 'add_review' product.id %}" class="button text-decoration-none">Add a Review
+                    <span class="icon ml-2">
+                        <i class="fas fa-plus"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
-<!-------------------Ratings and reviews-->
+
+
 
 {% endblock %}
 

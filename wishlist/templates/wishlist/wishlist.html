@@ -33,8 +33,7 @@
                         <img class="product-image-sm" src="{{ product.product.image.url }}"
                             alt="{{ product.product.name }}">
                         {% else %}
-                        <img class="" src="{{ MEDIA_URL }}shop-kbeauty-logo-final.webp"
-                            alt="{{ product.product.name }}">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         {% endif %}
                     </td>
                     <td class="wishlist-td" data-label="Name:">
@@ -67,14 +66,16 @@
     </div>
     {% endif %}
 </div>
-<a href="{% url 'products' %}"><button class="button">Return to shopping <span class="icon ml-1"><i
-                class="fa fa-chevron-left"></i></span></button></a>
-<!-- Arrow to scroll up to the top of the page -->
-<div class="btt-button shadow-sm rounded-2 border border-black">
-    <a class="btt-link d-flex h-100">
-        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-    </a>
-</div>
+<div class="col-3">
+    <a href="{% url 'products' %}"><button class="button">Return to shopping <span class="icon ml-1"><i
+                    class="fa fa-chevron-left"></i></span></button></a>
+    <!-- Arrow to scroll up to the top of the page -->
+    <div class="btt-button shadow-sm rounded-2 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>
+    </div>
+
 </div>
 
 {% endblock %}

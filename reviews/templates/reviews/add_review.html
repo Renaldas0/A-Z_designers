@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col-12 text-center mt-2">
+            <h2>Reviews for {{ product.name }}</h2>
+        </div>
+    </div>
+</div>
+<hr>
+{% endblock %}
+
+{% block content %}
+{% if reviews %}
+<div class="container-fluid">
+    <div class="row">
+        {% for review in reviews %}
+        <div class="col-12 col-md-6 col-lg-3 mt-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <p class="card-text">{{ review.rating }}</p>
+                    <p><small class="text-muted p-0"><em>Posted by {{ review.user }} on {{ review.date }}</em></small>
+                    </p>
+                    <p class="card-text">{{ review.review }}</p>
+                    {% if request.user.is_superuser %}
+                    <div class="text-center">
+                        <div class="container d-flex justify-content-center mt-2 mb-2">
+                            <a class="btn btn-sm btn-outline-black text-shadow mt-1 rounded-0 mb-3 mx-2"
+                                href="{% url 'edit_review' review.id %}">
+                                Edit
+                            </a>
+                            <button class="btn btn-sm btn-red text-shadow mt-1 rounded-0 mb-3 mx-2" data-toggle="modal"
+                                data-target="#modal-{{ review.id }}">Delete</button>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="card-footer">
+                    <!-- Prompts site users/ visitors to add their review if they use current product -->
+                    <p><em>Have you used {{ product.name }} before?</em></p>
+                    <a href="{% url 'add_review' product.id %}" class="btn btn-sm btn-black rounded-0 text-shadow">
+                        Share your experience!
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <!-- Message displays if there are no featured or available reviews -->
+    <div class="col">
+        <p>No reviews available for this product yet.</p>
+        <p class="alt-text-muted h5">Share your thoughts on a previously purchased product.
+        </p>
+    </div>
+    {% endif %}
+
+    <!-- Add product review column -->
+
+    <div class="col-12 col-md-6 col-lg-4 offset-lg-6">
+        <!-- Add review form  -->
+        <form method="POST" action="{% url 'add_review' product.id %}" id="add-review-form">
+            {% csrf_token %}
+            {{ review_form|crispy }}
+            <!-- Cancel review link -->
+            <a href="{% url 'product_detail' product.id %}" class="btn btn-black rounded-0 text-uppercase mt-1 mb-3">
+                <span class="text-uppercase">Cancel</span>
+            </a>
+            <!-- Submit review button -->
+            <button class="btn btn-outline-black rounded-0 mt-1 mb-3 text-uppercase" type="submit">
+                Submit review
+                <span class="icon">
+                    <i class="fas fa-arrow-right"></i>
+                </span>
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}
