@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -38,19 +38,9 @@ class Product(models.Model):
         """return product name by default"""
         return self.name
 
-    def review_count(self):
-        """Return total reviews for product"""
-        count = self.reviews.aggregate(
-            count=models.Count('rating'))['count']
-
-        if count is None:
-            count = 0
-
-        return count
-
 
 class Review(models.Model):
-    # Model for customers to leave a review
+    # Model for users to leave a review
     product = models.ForeignKey(
         Product, on_delete=models.CASCADE, related_name='reviews')
     RATING_CHOICES = (
@@ -61,8 +51,8 @@ class Review(models.Model):
         (5, '5'),
     )
     rating = models.IntegerField(choices=RATING_CHOICES, default=3)
-    review = models.TextField()
-    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    review = models.TextField(max_length=250)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

@@ -1,11 +1,13 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
-from django.views.generic import FormView
+from django.db import IntegrityError
+from django.forms.utils import ErrorDict
 from .models import Product, Category, Review
-from .forms import ProductForm, ReviewForm
+from .forms import ProductForm
 
 
 def all_products(request):
@@ -72,6 +74,10 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+    def post(self, request, *args, **kwargs):
+        view = ProductReview.as_view()
+        return view(request, *args, **kwargs)
 
 
 @login_required
@@ -146,54 +152,18 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-class ProductReview(FormView):
-    """Displayed on product detail, used to add reviews"""
-    template_name = 'products/product_detail.html'
-    form_class = ReviewForm
-    model = Review
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-
-        # make sure the user is logged in first
-        if self.request.user.is_authenticated:
-            # check to see if user has already posted review for product
-            user_has_reviewed = Review.objects.filter(
-                product=self.object).filter(user=self.request.user)
-            # if no object was returned then user has not submitted a review
-            if not user_has_reviewed:
-                context['display_form'] = True
-
-        # passthrough form for rendering in template
-        context['form'] = ReviewForm()
-
-        # get average review rating and pass through to template
-        product_rating = Review.objects.filter(
-            product=self.object).aggregate(Avg('rating'))
-
-        context['product_rating'] = product_rating['rating__avg']
-        return context
-
-    def post(self, request, *args, **kwargs):
-        if not request.user.is_authenticated:
-            return HttpResponseForbidden()
-
-        form = self.form_class(request.POST)
-
-        # store the product id passed through the url(defined as pk in urls.py)
-        self.pk = kwargs.get('pk')
-
-        if form.is_valid():
-            # foreign key objects not yet added, prevent saving and add them
-            review = form.save(commit=False)
-            review.product = get_object_or_404(Product, pk=product_id)
-            review.user = self.request.user
+def submit_review(request):
+    if request.method == 'POST':
+        rating = request.POST.get('rating')
+        review = request.POST.get('review')
+        try:
+            review = Review(rating=rating, review=review)
             review.save()
-            messages.success(request, 'Review submitted successfully!')
-            return redirect(reverse('product_detail', args=[product.id]))
-
-        else:
-            messages.error(request,
-                           'Failed to submit review. Please Double check your form.')
-
-        return super().post(request, *args, **kwargs)
+            messages.success(request, 'Your review has been submitted.')
+            return redirect('product_detail', pk=review.product.id)
+        except IntegrityError as e:
+            print(e)
+            messages.error(request, 'There was an error submitting your review.If the problem persists please contact customer support. We apologise for this inconvenience.')
+            return redirect('home')
+    else:
+        return redirect('home')

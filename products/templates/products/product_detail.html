@@ -114,52 +114,57 @@
 <!-------------------Ratings and reviews-->
 <div class="container-fluid">
     <div class="row">
-        <h6 class="text-uppercase text-center col-12"><strong>Reviews</strong></h6>
-        <hr class="col-12">
-        <div class="col-12 tab-pane mt-2" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-            {% for review in product.reviews.all %}
-            <div class="col-md-3">
-                <h5 class="name text-capitalize">Username: <strong>{{ review.user.username }}</strong>
-                </h5>
-                <p class="date">Date: <strong>{{ review.date }}</strong></p>
-                <div class="review-rating px-1">
-                    {% autoescape off %}
-                    Rating: {{ review.rating}}/5
-                    {% endautoescape %}
-                </div>
-                <div class="review-body border p-1">
-                    <p>Comment: {{ review.review }}</p>
-                </div>
-            </div>
-            {% empty %}
-            <p>This product does not have any reviews yet. You can be the first!</p>
-        </div>
-        {% endfor %}
-        <!---------------------------------Review Form-->
-        <div class="col-md-3 col-10">
-            <form class="review-form" method="GET" action="/review">
-                {% for product in products %}
-                <input type="hidden" name="product_id" id="product_id" value="{{ product.id }}">
-                {% endfor %}
-                <div class="form-group">
-                    <textarea class="input mt-3" name="review" type="text" placeholder="Leave your review!"></textarea>
-                </div>
-                <div class="form-group">
-                    <div class="input-rating">
-                        <p class="text-uppercase font-weight-bold">Your rating: </p>
+        <div class="tab-pane  col-md-4" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+            <ul class="reviews">
+                {% for review in product.reviews.all %}
+                <li class="border p-2 mb-1">
+                    <div class="review-heading">
+                        <h5 class="name">Review by: <strong>{{ review.user.username }}</strong></h5>
+                        <p class="date">Date: <strong>{{ review.date }}</strong></p>
+                        <div class="review-rating">
+                            {% autoescape off %}
+                            Rated: {{ review.rating }}/5
+                            {% endautoescape %}
+                        </div>
                     </div>
-                </div>
+                    <div class="review-body">
+                        <p>Comment: {{ review.review }}</p>
+                    </div>
+                </li>
+                {% empty %}
+                <li>This product does not have any reviews yet. You can be the first!</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+        <!---------------------------------Review Form-->
+        <div class="col-md-6 float-right">
+            <h1>Product Review Form</h1>
+            <form method="POST" action="{% url 'submit_review' %}">
+                {% csrf_token %}
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <br><br>
+                <textarea class="col-6" id="review" name="review" placeholder="Leave your review here"></textarea>
+                <br><br>
                 {% if user.is_authenticated %}
-                <button class="button button-success m-0" type="submit">Post Review</button>
+                <input class="button" type="submit" value="Submit">
                 {% else %}
-                <p>You must <a href="{% url 'account_login' %}">login</a> or <a
-                        href="{% url 'account_signup' %}">register</a> to submit a review.</p>
+                <p class="text-danger">You must <a href="{% url 'account_login' %}">Login</a> or <a
+                        href="{% url 'account_signup' %}">Register</a> to submit a review.</p>
                 {% endif %}
             </form>
+
         </div>
     </div>
 </div>
-
 {% endblock %}
 
 {% block postloadjs %}
