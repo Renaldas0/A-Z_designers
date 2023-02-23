@@ -21,7 +21,8 @@
       </p>
       <p>Sign up to our Newsletter for new arrival updates<a href="{% url 'newsletter' %}" class="text-uppercase">
           Here!</a></p>
-      <button type="submit" class="button">{% trans "Sign Up" %} &raquo;</button>
+      <input type="checkbox" required><a class="ml-1" href="{% url 'terms_and_conditions' %}">Terms & Conditions</a>
+      <button type="submit" class="button ml-2">{% trans "Sign Up" %} &raquo;</button>
     </form>
   </div>
 </section>

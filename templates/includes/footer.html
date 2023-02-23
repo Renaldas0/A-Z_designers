@@ -1,6 +1,6 @@
 {% load static %}
 
-<footer class="bg-light text-light py-4">
+<footer class="bg-light py-4">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
@@ -50,9 +50,9 @@
                 <ul class="list-unstyled text-center">
                     <h3 class="text-black text-center my-1">Policies</h3>
                     <hr>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Returns & Refunds Policy</a></li>
+                    <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>
+                    <li><a href="{% url 'terms_and_conditions' %}">Terms & Conditions</a></li>
+                    <li><a href="{% url 'return_and_refund_policy' %}">Returns & Refunds Policy</a></li>
                 </ul>
             </div>
         </div>

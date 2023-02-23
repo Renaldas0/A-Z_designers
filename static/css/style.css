@@ -159,7 +159,7 @@ select option [value=""] {
 /* Background image and home page */
 
 .background-img {
-    background: url('/media/main-page.jpg') no-repeat center center fixed;
+    background: url('/media/main-page.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -167,7 +167,7 @@ select option [value=""] {
 }
 
 .home-container {
-    top: 35%;
+    top: 45%;
 }
 
 .new-arrivals {
