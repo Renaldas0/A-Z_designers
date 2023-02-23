@@ -37,23 +37,3 @@ class Product(models.Model):
     def __str__(self):
         """return product name by default"""
         return self.name
-
-
-class Review(models.Model):
-    # Model for users to leave a review
-    product = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name='reviews')
-    RATING_CHOICES = (
-        (1, '1'),
-        (2, '2'),
-        (3, '3'),
-        (4, '4'),
-        (5, '5'),
-    )
-    rating = models.IntegerField(choices=RATING_CHOICES, default=3)
-    review = models.TextField(max_length=250)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    date = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return self.review

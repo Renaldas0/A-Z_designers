@@ -119,59 +119,7 @@
     </div>
 </div>
 <!-------------------Ratings and reviews-->
-<div class="container-fluid">
-    <div class="row">
-        <div class="tab-pane  col-md-4" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
-            <ul class="reviews">
-                {% for review in product.reviews.all %}
-                <li class="border p-2 mb-1">
-                    <div class="review-heading">
-                        <h5 class="name">Review by: <strong>{{ review.user.username }}</strong></h5>
-                        <p class="date">Date: <strong>{{ review.date }}</strong></p>
-                        <div class="review-rating">
-                            {% autoescape off %}
-                            Rated: {{ review.rating }}/5
-                            {% endautoescape %}
-                        </div>
-                    </div>
-                    <div class="review-body">
-                        <p>Comment: {{ review.review }}</p>
-                    </div>
-                </li>
-                {% empty %}
-                <li>This product does not have any reviews yet. You can be the first!</li>
-                {% endfor %}
-            </ul>
-        </div>
 
-
-        <!---------------------------------Review Form-->
-        <div class="col-md-6 float-right">
-            <h1>Product Review Form</h1>
-            <form method="POST" action="{% url 'submit_review' %}">
-                {% csrf_token %}
-                <label for="rating">Rating:</label>
-                <select id="rating" name="rating">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <br><br>
-                <textarea class="col-6" id="review" name="review" placeholder="Leave your review here"></textarea>
-                <br><br>
-                {% if user.is_authenticated %}
-                <input class="button" type="submit" value="Submit">
-                {% else %}
-                <p class="text-danger">You must <a href="{% url 'account_login' %}">Login</a> or <a
-                        href="{% url 'account_signup' %}">Register</a> to submit a review.</p>
-                {% endif %}
-            </form>
-
-        </div>
-    </div>
-</div>
 {% endblock %}
 
 {% block postloadjs %}
