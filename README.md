@@ -1,8 +1,19 @@
 # A-Z_Designers
 
-### [A-Z_Designers](https://a-z-designers.herokuapp.com/) is a full stack E-Commerce website developed to be a website for an online clothing store. This website allows users to purchase clothing that is in stock as Anonymous users and even create an account which allows them to save shipping/billing details and previous orders.
+### [A-Z_Designers](https://a-z-designers.herokuapp.com/) is my final milestone project at [Code Institute] and it is a full stack E-Commerce website developed to be a website for an online clothing store. This website allows users to purchase clothing that is in stock as Anonymous users and even create an account which allows them to save shipping/billing details and previous orders. This project demonstrates my learning and understanding throughout the course of full stack website development.
+
+### I believe I produced a website that is very adaptable and can be repurposed for many ecommerce applications, this includes subscriptions and transactional services. There are numerous features which I would like to have added for submission of this project, however, due to limited time this was not possible for the moment.
+
+If you wish to test account functionality, demo accounts have been provided below. Please note that not all error pages have been created and therefore on the occasional error the base django template will show up.
 
 ![responsive](https://user-images.githubusercontent.com/97538312/203823455-a1f9d1d8-3687-4b54-a6a1-2b5d1a8e8026.jpg)
+
+To test website functionality, please find account details below.
+
+| Username | Password | Desription |
+| ----- | -------- | ---------- |
+| hodedar | 11@@11@@ | Customer account created with temp-mail and consists of multiple orders and reviews. (testing email confirmation was successful) |
+| AZ_Designer_super | @@11@@11 | Admin account with create and update permissions to all custom models, these are accessible in the access admin area and product management on the website account section. |
   
 ##  **Purpose**
   - The purpose of this E-Commerce website is to connect users with a retail business in which the user can purchase designer clothing online efficiently from the comfort of their home.
@@ -14,53 +25,76 @@
 
 ## User Stories
 
-### User Stories that have been achieved for this deadline in this project:
+### Customer
+  - As a shopper I can see the products for sale so that I can select items to buy
+  - As a Shopper I can read product description so that I know more about the product being sold
+  - As a shopper I can quickly navigate to my desired product so that my shopping experience is much faster and smoother.
+  - As a shopper I can see how many products I have added to my bag and price total so that I know exactly how much I have selected/selected for.
+  - As a site user I can register quickly so that I can save my details to make shopping here again a faster experience
+  - As a site user I can login so that I can access my personal account information and history
+  - As a site user I can recover my password so that I can still login to my account if I forget my login credentials
+  - As a site user I can receive an email confirmation so that I know for sure my account has been registered to the website
+  - As a shopper I can sort for products by various stats so that I can quickly and efficiently find what I am looking for
+  - As a shopper I can search for a product so that I can immediately see if the site offers that product
+  - As a shopper I can select the size and quantity so that I get the correctly sized article of clothing and more than one if I desire
+  - As a site user I can check the company's social media so that I can further verify their credibility and follow them
+  - As a site user I can contact the company so that any questions I have can be addressed
+  - As a user I would like to be able to select the quantity of a specific product without having to click on it multiple times, so that my shopping experience is         smoother and faster.
+  - As a user I want to be able to enter my payment details securely without the fear of them getting leaked and use trusted and well known payment methods.
+  - As a user I want to receive confirmation of my order to know everything went through and I can expect my order to be on the way.
+  - As a user I am not entirely comfortable giving my information to register and would like the option to shop without creating an account.
+  
+### Site Owner
+  - As a website owner I want users to have an enjoyable UX and therefore to adapt to errors happening include a not so boring 404 error page.
+  - As a site owner I want to add new products and have them automatically display on the website, so that customers can purchase them.
+  - As a site owner I want to be able to edit product details, for example, price and stock so that products can be updated.
+  - As a site owner I want to be able to delete products from display, so that if I have stock issues I can prevent customers from viewing it.
+  - As a site owner I want to be able to link customer orders to the Stripe PaymentIntent dashboard, so that I can verify custom payment details, if I need to.
+  - As a site owner I want to be able to manage customer reviews, so that any inappropriate content can be removed if necessary.
 
-| id  |  Content | How was it satisfied
-| ------ | ------ | ------ |
-|  [#1](https://github.com/Renaldas0/ImproveYourGolf/issues/1) | As a site user I can view the layout of the website so that everything is easy to find on the page and I know what it is about. | Webpage |
-|  [#2](https://github.com/Renaldas0/ImproveYourGolf/issues/2) | As a site user I can use the navbar so that I can easily navigate through the website with the navbar. | Webpage |
-|  [#3](https://github.com/Renaldas0/ImproveYourGolf/issues/3) | As a site user I can see the footer clearly so that I can see any social media links clearly incase I wish to follow up there. | Webpage |
-|  [#4](https://github.com/Renaldas0/ImproveYourGolf/issues/4) | As a site user I can read about classes so that I can get information about each class offered. | Class Information |
-|  [#5](https://github.com/Renaldas0/ImproveYourGolf/issues/5)| As a site user I can read about the scheduled classes so that I know which class is the best to book according to my schedule. | Class Information |
-|  [#6](https://github.com/Renaldas0/ImproveYourGolf/issues/6) | As a site user I can check the availability of classes so that I know if the class i'm interested in is available. | Booking |
-|  [#7](https://github.com/Renaldas0/ImproveYourGolf/issues/7) | As a site user I can book a class to my schedule so that I can get a reserved place for a lesson. | Booking |
-|  [#8](https://github.com/Renaldas0/ImproveYourGolf/issues/8)| As a site user I can cancel my booking so that my place is not reserved in case I can't make it to the class. | Manage Booking |
-|  [#9](https://github.com/Renaldas0/ImproveYourGolf/issues/9) |As a site user I can login to my account so that my details are saved and I can place a booking faster. |  Login/SignUp |
-|  [#11](https://github.com/Renaldas0/ImproveYourGolf/issues/11) | As a site user I can contact a teacher so that I can ask questions regarding these lessons. |  Webpage |
-|  [#12](https://github.com/Renaldas0/ImproveYourGolf/issues/12) | As a site admin I can add social media platforms so that students can follow us on other platforms to better understand our goals. | Webpage |
-|  [#13](https://github.com/Renaldas0/ImproveYourGolf/issues/13) | As a site admin I can edit classes so that I can adjust bookings personally if requested by a user. |  Admin |
-|  [#14](https://github.com/Renaldas0/ImproveYourGolf/issues/14) | As a site user I can block off bookings so that the class isn't overbooked | Admin |
-|  [#15](https://github.com/Renaldas0/ImproveYourGolf/issues/15)| As a site admin I can approve a booking so that I can control how many people book for the class and see who places the booking. | Admin |
-|  [#17](https://github.com/Renaldas0/ImproveYourGolf/issues/15)| Develop the website to be responsive and look aesthetic on all devices. | Webpage |
-
-### User stories that are planned for next deployment
 
 ## **Features**
 
 - **User Features** 
-  - Fully functioning front end website for users to get information on about the lessons
+  - Fully functioning front end website for users to view products for sale
   - Ability to register an account and login/logout.
-  - Ability for users to place bookings for their desired class
-  - Ability for users to change or cancel their bookings
-  - The layout of certain sections changes, dpending if a user is logged in or not.
+  - Ability for users to place products into their shopping bag
+  - Ability for users to edit quantity of items and remove items directly in the bag
   - Fully responsive design using bootstrap and media queries for user on all devices.
+  
+#### Accounts
+
+This is where all customer information is retained via the custom user model. I also made the decision to use Django-allauth which added the ability to override the username field, using the email address as the login. It also brought with it the ability to verify email addresses and reset passwords.
+
+I created personalised Login, Sign Up, Sign out, forms with the help of crispy forms.
+Crispy forms was installed using pip3 install django-crispy-forms and then add this to the apps section in settings.py
+
+I then also created personalised email confirmation, and email verification templates.
+  
+### Profiles
+Users who create accounts can store their shipping and billing informtion for a faster shopping experience using the profiles custom model. This takes in some basic information from the user when the user is completing their checkout form.
+This also allows the users to see their order history.
+
 
 - **Admin Features**
   - As an admin only I have the ability to login to the admin panel
-  - Admin is able to see all placed reservations and control them
-  - Admin is able to see all customer input details
-  - Admin can see who placed the reservations by their login details
-  - Most importantly the admin can update or delete all reservations
+  - Admin is able to see all orders made by users
+  - Admin is able to see all customer details
+  - Admin can create, edit or delete products directly from the website or admin panel
+
 
 - **Site Features**
-  - The site is developed to be a single scroll page except for the register and login forms
-  - The main section loads up with an image displaying the theme of the website (golf) and the title clearly visible to users
-  - The navbar is compact into a hamburger menu icon and is transparent if the page is at the complete top
-  - Once the user scrolls for better user experience, the navbar is set to always be visible and a background colour appears using JavaScript
-  - For extra functionality there is a button which if clicked simply scrolls down to the About Us section
-  - Clicking on sections in the navbar scrolls the page down to that desired section
-  - Clicking on the heading will also scroll the page back up to the top
+  - The home page is a clear landing page that shows this is a cclothing ecommerce store
+  - The navbar becomes compact into a hamburger menu icon for smaller screen devices
+  - Full navigation of products and filtering can be done in the navigation menu
+  - Accounts can also be accessed in the navigation 
+  - The users shopping bag updates when products are added to the bag
+  - For extra functionality there is a button which if clicked simply scrolls up to the top of the page in the products section
+  - Clicking on sections in the navbar opens up the desired page/ category of clothing
+  - Clicking on the heading will take the user back to the home page
+  
+ -**Stripe**
+  - Stripe is used to handle paayments on this website
   
 ## Main section
 ![main-screenshot](https://user-images.githubusercontent.com/97538312/201192933-98a6b956-1bc9-43e9-84d8-8ba22933ffd2.jpg)
