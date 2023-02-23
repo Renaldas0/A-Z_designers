@@ -107,6 +107,13 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
+                <div class="row">
+                    <div class="col-12 pt-2 pl-0">
+                        <a class="float-right" href="{% url 'add_to_wishlist' product.id %}"
+                            aria-label="Add product to Wishlist"><button class="button">Add to Wishlist</button>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

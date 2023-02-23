@@ -129,6 +129,7 @@
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                             {% endif %}
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'wishlist' %}" class="dropdown-item">My Wishlist</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -199,29 +200,31 @@
     {% block content %}
     {% endblock %}
 
-    <footer id="footer" class="mt-auto d-flex flex-column text-center text-black bg-white sticky-bottom">
-        <h4 class="contact text-capitalize">Contact us</h4>
-        <p><span>Email: </span>testmail@email.com</p>
-        <p><span>Phone: </span>0889168999</p>
-        <ul class="contact-list">
-            <li class="contact-list-item contact-facebook list list-inline-item"><a
-                    href="https://www.facebook.com/profile.php?id=100089866856571" class="text-decoration-none"
-                    target="_blank">
-                    <span class="social-media icon">
-                        <i class="fa-brands fa-facebook">
+    <footer class="footer mt-auto d-flex flex-column text-center text-black bg-white sticky-bottom">
+        <div class="container">
+            <h4 class="contact text-capitalize">Contact us</h4>
+            <p><span>Email: </span>testmail@email.com</p>
+            <p><span>Phone: </span>0889168999</p>
+            <ul class="contact-list">
+                <li class="contact-list-item contact-facebook list list-inline-item"><a
+                        href="https://www.facebook.com/profile.php?id=100089866856571" class="text-decoration-none"
+                        target="_blank">
+                        <span class="social-media icon">
+                            <i class="fa-brands fa-facebook">
 
-                        </i>
-                    </span>
-                </a>
-            </li>
-            <li class="contact-list-item contact-github list list-inline-item"><a href="https://github.com/Renaldas0"
-                    class="text-decoration-none" target="_blank">
-                    <span class="social-media icon">
-                        <i class="fa-brands fa-github"></i>
-                    </span>
-                </a>
-            </li>
-        </ul>
+                            </i>
+                        </span>
+                    </a>
+                </li>
+                <li class="contact-list-item contact-github list list-inline-item"><a
+                        href="https://github.com/Renaldas0" class="text-decoration-none" target="_blank">
+                        <span class="social-media icon">
+                            <i class="fa-brands fa-github"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
 
