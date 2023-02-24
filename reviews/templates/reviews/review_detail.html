@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+            <h2 class="text-center mt-2">Thank you for your review!</h2>
+            <hr>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container mb-2">
+    <div>
+        <!-- Review details  -->
+        <h3>Details of your review:</h3>
+        <h4>Product: {{ review.product.name }}</h4>
+        <p>Comment: {{ review.review }}</p>
+        <p>Rated: {{ review.rating }}/5</p>
+        <p>Created by: {{ review.user }}</p>
+        <p>On: {{ review.date }}</p>
+        {% if request.user.is_superuser %}
+        <div class="text-center">
+            <div class="container d-flex justify-content-center mt-2 mb-2">
+                <a class="button btn-warning mr-1" href="{% url 'edit_review' review.id %}">
+                    Edit
+                </a>
+                <button class="button btn-danger ml-1">Delete</button>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <!-- Continue Shopping link -->
+    <a href="{% url 'products' %}" class="button">
+        <span class="icon">
+            <i class="fas fa-shopping-bag"></i>
+        </span>
+        <span class="text-capitalize">Keep Shopping</span>
+    </a>
+</div>
+{% endblock %}

@@ -40,7 +40,7 @@ def add_review(request, product_id):
             review.product = product
             review.user = request.user
             review.save()
-            messages.success(request, "Thank you! Your review has been added successfully!.")
+            messages.success(request, "Thank you! Your review has been added successfully!")
             return redirect(reverse('review_detail', args=[review.id]))
         else:
             messages.error(request, "Review Form invalid, please try again.")
@@ -92,7 +92,7 @@ def edit_review(request, review_id):
             messages.error(request, f'Failed to update this review. Please check your form.')
     else:
         review_form = ReviewForm(instance=review)
-        messages.info(request, f'You are editing {review.title}')
+        messages.info(request, f'You are editing {review.product.name}')
 
     template = 'reviews/edit_review.html'
 

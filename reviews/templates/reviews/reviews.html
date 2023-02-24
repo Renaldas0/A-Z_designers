@@ -4,29 +4,46 @@
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
-        <div class="col">
+        <div class="col text-center mt-2">
             <h2>Reviews for {{ product.name }}</h2>
+            <hr>
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block content %}
 {% if reviews %}
 <div class="container-fluid">
     <div class="row">
+        <div class="col-lg-3 col-md-4 col-12">
+            <!-- Card Image -->
+            {% if product.image %}
+            <a href="{% url 'product_detail' product.id %}">
+                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+            </a>
+            {% else %}
+            <a href="{% url 'product_detail' product.id %}">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+            </a>
+            {% endif %}
+        </div>
         {% for review in reviews %}
-        <div class="col-12 col-md-6 col-lg-3 mt-3">
+        <div class="col-12 col-md-4 col-lg-3 mt-3">
             <div class="card h-100">
                 <div class="card-body">
                     <h3 class="card-title brand-font-alt h6">Product: {{ product.name }}</h3>
                     <p><small class="text-muted p-0"><em>Posted by {{ review.user.username }} on
                                 {{ review.date }}</em></small></p>
                     <p class="card-text">{{ review.review }}</p>
+                    <p class="card-text">Rated: {{ review.rating }}/5</p>
                     {% if request.user.is_superuser %}
                     <div class="text-center">
                         <div class="container d-flex justify-content-center mt-2 mb-2">
-                            <a class="button mb-3 mx-2" href="{% url 'edit_review' review.id %}">
+                            <a class="button btn-warning mb-3 mx-2" href="{% url 'edit_review' review.id %}">
                                 Edit
                             </a>
-                            <button class="button btn-red mb-3 mx-2">Delete</button>
+                            <button class="button btn-danger mb-3 mx-2">Delete</button>
                         </div>
                     </div>
                     {% endif %}

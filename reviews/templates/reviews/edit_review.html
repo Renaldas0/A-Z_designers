@@ -1,39 +1,40 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
 {% block page_header %}
 <div class="container header-container">
     <div class="row">
-        <div class="col-12 text-center mt-2">
-            <h2>Reviews for {{ product.name }}</h2>
+        <div class="col">
+            <h2 class="text-center">Editing : {{ review.product.name }}</h2>
         </div>
     </div>
 </div>
-<hr>
 {% endblock %}
 
 {% block content %}
-<!-- Add product review -->
-<div class="container-fluid">
+<!-- EDIT REVIEW FORM  -->
+<div class="container mb-5">
+    <!-- Edit product review column -->
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-1">
-            <!-- Add review form  -->
-            <form method="POST" action="{% url 'add_review' product.id %}" id="add-review-form">
+        <div class="col">
+            <!-- Edit review form  -->
+            <form method="POST" action="{% url 'edit_review' review.id %}" id="edit-review-form">
                 {% csrf_token %}
                 {{ review_form|crispy }}
                 <!-- Cancel review link -->
-                <a href="{% url 'product_detail' product.id %}" class="button btn-warning text-capitalize mt-1 mb-3">
+                <a href="{% url 'products' %}" class="button btn-warning text-capitalize mt-1 mb-3">
                     <span class="text-uppercase">Cancel</span>
                 </a>
                 <!-- Submit review button -->
                 <button class="button btn-success mt-1 mb-3 text-capitalize" type="submit">
-                    Submit review
-                    <span class="icon">
-                        <i class="fas fa-arrow-right"></i>
+                    Done editing
+                    <span class="icon ml-1">
+                        <i class="fas fa-check"></i>
                     </span>
                 </button>
             </form>
         </div>
     </div>
 </div>
+
 {% endblock %}

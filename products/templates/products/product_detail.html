@@ -2,9 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
+<div class="container-fluid header-container">
     <div class="row">
-        <div class="col">
+        <div class="col text-center mt-2">
+            <h2 class="text-center">Product: {{ product.name }}</h2>
+            <hr>
         </div>
     </div>
 </div>
@@ -122,7 +124,7 @@
         <div class="col-12">
             <h4 class="text-center">Reviews</h4>
             {% if reviews %}
-            <a href="{% url 'reviews' product.id %}" class="btn btn-black rounded-0 text-uppercase mt-1">
+            <a href="{% url 'reviews' product.id %}" class="button my-1">
                 <span class="text-uppercase">See All Reviews</span>
                 <span class="icon">
                     <i class="fas fa-chevron-right"></i>
