@@ -3,6 +3,9 @@ import dj_database_url
 
 from pathlib import Path
 
+if os.path.isfile('env.py'):
+    import env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -15,7 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['a-z-designers.herokuapp.com', 'localhost']
 
@@ -42,6 +45,7 @@ INSTALLED_APPS = [
     'storages',
     'reviews',
     'wishlist',
+    'discounts',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +87,7 @@ TEMPLATES = [
     },
 ]
 
-# To resolve scrf token issues
+# To resolve csrf token issues
 CSRF_TRUSTED_ORIGINS = ['https://8000-renaldas0-azdesigners-9oopqfb2v8v.ws-eu85.gitpod.io']
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
@@ -124,9 +128,19 @@ WSGI_APPLICATION = 'a_z_designers.wsgi.application'
 #         }
 #     }
 
-DATABASES = {
-     'default': dj_database_url.parse('postgres://jqxmrmvo:ApuIgBtUxQvhqTG5vDSiNVndA5HVfcQo@trumpet.db.elephantsql.com/jqxmrmvo')
- }
+if 'DATABASE_URL' in os.environ:
+    # Use the deployed db stored in heroku config vars
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    # use the development sqlite db
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
