@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /bag/
+Disallow: /admin/
+
+Sitemap: https://a-z-designers.herokuapp.com/sitemap.xml

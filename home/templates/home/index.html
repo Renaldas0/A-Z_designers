@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_meta %}
+<meta keywords="clothes, clothing, ecommerce, shopping, shop, online shopping, womens clothes, 
+mens clothes, t-shirts, trousers, pants, sale, fashion, new style, new collection,
+bags, watches, luxury watches, high quality clothing, designer clothes, new, trending, delivery, shipping">
+{% endblock %}
+
 {% block page_header %}
 {% endblock %}
 
@@ -18,7 +24,7 @@
                         collections
                         here!</strong></h3>
                 <a href="{% url 'products' %}?category=new_arrivals" class="text-decoration-none"><button
-                        class="button btn-primary text-capitalize">shop
+                        class="button btn-primary show-now-button text-capitalize">shop
                         new arrivals!<span class="icon mx-2"><i class="fa-solid fa-truck"></i></span></button></a>
             </div>
         </div>

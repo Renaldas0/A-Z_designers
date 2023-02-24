@@ -4,12 +4,17 @@
 <html lang="en">
 
 <head>
+    {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="clothes, clothing, ecommerce, shopping, shop, online shopping, womens clothes, 
                                    mens clothes, t-shirts, trousers, pants, sale, fashion, new style, new collection,
                                    bags, watches, luxury watches, high quality clothing, designer clothes">
+    {% endblock %}
+
+    {% block extra_meta %}
+    {% endblock %}
 
     <!-- Bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
@@ -201,36 +206,6 @@
     {% endblock %}
 
     {% include 'includes/footer.html' %}
-    <!--
-    <footer class="footer d-flex flex-column text-center text-black bg-white sticky-bottom">
-        <div class="container">
-            <h4 class="logo logo-font text-center my-0"><strong><span class="logo-span">A-Z</span>_Designers</strong>
-            </h4>
-            <h5 class="contact text-capitalize">Contact us</h5>
-            <p>Email: testmail@email.com</p>
-            <p>Phone: 0889168999</p>
-            <ul class="contact-list">
-                <li class="contact-list-item contact-facebook list list-inline-item"><a
-                        href="https://www.facebook.com/profile.php?id=100089866856571" class="text-decoration-none"
-                        target="_blank">
-                        <span class="social-media icon">
-                            <i class="fa-brands fa-facebook">
-
-                            </i>
-                        </span>
-                    </a>
-                </li>
-                <li class="contact-list-item contact-github list list-inline-item"><a
-                        href="https://github.com/Renaldas0" class="text-decoration-none" target="_blank">
-                        <span class="social-media icon">
-                            <i class="fa-brands fa-github"></i>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </footer>
--->
 
     {% block postloadjs %}
     <script type="text/javascript">

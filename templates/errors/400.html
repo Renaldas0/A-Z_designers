@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="error-bg position-relative">
+    <div class="row h-100">
+        <div class="form-container col-10 my-auto">
+            <h2 class="display-4 text-black text-center">400</h2>
+            <h4 class="text-black">
+                Uh Oh, The Request is Quite Bad....Please double check your spelling, Thank you!
+            </h4>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'products' %}"
+                        class="text-decoration-none button btn-lg rounded-1 text-uppercase py-3">Go back Home
+                        <span class="icon ml-2">
+                            <i class="fas fa-arrow-left"></i>
+                        </span>
+                    </a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

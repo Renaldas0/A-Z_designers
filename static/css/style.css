@@ -178,6 +178,11 @@ select option [value=""] {
     font-size: 25px;
 }
 
+.btn-primary:hover {
+    background-color: #fff;
+    color: #006eff;
+}
+
 /*--------- Sign Up Form ---------*/
 
 .signup-heading {
