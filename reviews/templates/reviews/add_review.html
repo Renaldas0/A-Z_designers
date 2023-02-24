@@ -5,7 +5,7 @@
 <div class="container header-container">
     <div class="row">
         <div class="col-12 text-center mt-2">
-            <h2>Reviews for {{ product.name }}</h2>
+            <h2>Add your review for: {{ product.name }}</h2>
         </div>
     </div>
 </div>
@@ -22,13 +22,14 @@
                 {% csrf_token %}
                 {{ review_form|crispy }}
                 <!-- Cancel review link -->
-                <a href="{% url 'product_detail' product.id %}" class="button btn-warning text-capitalize mt-1 mb-3">
+                <a href="{% url 'product_detail' product.id %}"
+                    class="button btn-warning text-capitalize text-decoration-none mt-1 mb-3">
                     <span class="text-uppercase">Cancel</span>
                 </a>
                 <!-- Submit review button -->
-                <button class="button btn-success mt-1 mb-3 text-capitalize" type="submit">
+                <button class="button btn-success mx-3 mt-1 mb-3 text-capitalize" type="submit">
                     Submit review
-                    <span class="icon">
+                    <span class="icon ml-1">
                         <i class="fas fa-arrow-right"></i>
                     </span>
                 </button>

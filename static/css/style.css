@@ -10,9 +10,6 @@ body {
     background-color: rgb(255, 255, 255);
     font-family: 'PT Serif', sans-serif;
     height: calc(100vh - 164px);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 html {

@@ -43,7 +43,10 @@
                             <a class="button btn-warning mb-3 mx-2" href="{% url 'edit_review' review.id %}">
                                 Edit
                             </a>
-                            <button class="button btn-danger mb-3 mx-2">Delete</button>
+                            <a href="{% url 'delete_review' review.id %}"><button
+                                    class="button btn-danger mb-3 mx-2">Delete</button>
+                            </a>
+
                         </div>
                     </div>
                     {% endif %}
