@@ -1,12 +1,13 @@
 # A-Z_Designers
 
+![am_i_responsive](https://user-images.githubusercontent.com/97538312/221374432-c301bff7-83df-4fa4-b443-0bf106b2dd4e.png)
+
+
 ### [A-Z_Designers](https://a-z-designers.herokuapp.com/) is my final milestone project at [Code Institute] and it is a full stack E-Commerce website developed to be a website for an online clothing store. This website allows users to purchase clothing that is in stock as Anonymous users and even create an account which allows them to save shipping/billing details and previous orders. This project demonstrates my learning and understanding throughout the course of full stack website development.
 
 ### I believe I produced a website that is very adaptable and can be repurposed for many ecommerce applications, this includes subscriptions and transactional services. There are numerous features which I would like to have added for submission of this project, however, due to limited time this was not possible for the moment.
 
 If you wish to test account functionality, demo accounts have been provided below. Please note that not all error pages have been created and therefore on the occasional error the base django template will show up.
-
-![responsive](https://user-images.githubusercontent.com/97538312/203823455-a1f9d1d8-3687-4b54-a6a1-2b5d1a8e8026.jpg)
 
 To test website functionality, please find account details below.
 
@@ -14,14 +15,34 @@ To test website functionality, please find account details below.
 | ----- | -------- | ---------- |
 | hodedar | 11@@11@@ | Customer account created with temp-mail and consists of multiple orders and reviews. (testing email confirmation was successful) |
 | AZ_Designer_super | @@11@@11 | Admin account with create and update permissions to all custom models, these are accessible in the access admin area and product management on the website account section. |
-  
+
+## Future Goals 
+A-Z_Designers' plan is to expand rapidly by adding more and more new products for sale every week.
+We plan to also increase the choice of sizes, variety of products and even colours.
+Add filtering by rating
+
+## Functionality goals
+Website functionality goals we strive to achieve over the next few website launches include :
+- Tracking of deliveries for users
+- Set up an efficient way for users to submit a refund request without the need to contact customer support via email or phone call.
+- Allow first time buyers a discount code to be used.
+- Introduce coupons for various releases to promote users to use our services and be rewarded with a discount.
+
 ##  **Purpose**
   - The purpose of this E-Commerce website is to connect users with a retail business in which the user can purchase designer clothing online efficiently from the comfort of their home.
+  - A-Z_Designers is a fully online based business that targets audience of ages between 18-50 both male and female and sells designer brand clothing through this ecommerce webiste. A customer does not have to go into a shop to make a purchase. We sell brands that are recognised by all and some brands that may not have been heard of by many.
+  
+## Business model
+  - A-Z_Designers is a Business to Consumer (B2C) direct sellers of multiple brands of clothing products.
+
 
 ## Agile Methodology
   - Use of Github Issues and User Stories is involved as part of Agile methodology
-  ![user_stories](https://user-images.githubusercontent.com/97538312/204099265-eb4c50b9-ed7d-4d70-b27c-5a2d807fd17e.jpg)
-
+  - Setting a label on issues allowed me to better understand which issues need focusing on first 
+  - Which MUST be implemented 
+  - Which can be left till last
+  - When an issue is completed it gets moved from the in progress table to the completed table 
+  - Completed issues also get marked as 'closed'
 
 ## User Stories
 
@@ -52,15 +73,82 @@ To test website functionality, please find account details below.
   - As a site owner I want to be able to link customer orders to the Stripe PaymentIntent dashboard, so that I can verify custom payment details, if I need to.
   - As a site owner I want to be able to manage customer reviews, so that any inappropriate content can be removed if necessary.
 
+### General Github issues
+  - Implement a feature for the website where first time buyers can use a discount code for a 10% discount on their purchase.
+  - Write up a descriptive readme file to meet the projects requirements.
+  - Set up the project app and install required packages such as , psycopg, django, python, crispy forms and storages.
+  - Setup the base.html template that will span across the other templates, this mostly consists of header and footer and the other html templates will go in between.
+  - Use figma to design the templates I will need across the site. Home page, products, individual product, reviews page, product management, login and signup forms, checkout, bag and wishlist.
+  - Import jQuery, Bootstrap, fontawesome, bulma and favicon.
+  
+**Gain Shopper Trust**
+| # | Information a Shopper may need in order to Make a Buying Decision | Delivered |
+| --- | --- | --- |
+| 1 | Brand Name  | ✅ |
+| 2 | Branded Products  | ✅ |
+| 3 | Branded Product that is trending  | ✅ |
+| 4 | Product Price | ✅ |
+| 5 | Product Description | ✅ |
+| 6 | Product's materials  | ✅ |
+| 7 | Delivery cost | ✅ |
+| 8 | Product Reviews and Rating | ✅ |
 
-## **Features**
+
+## **Site Features**
+  - Home page with a minimalistic design which allows users to know they are on a clothing website
+  - Clicking on the heading will take the user back to the home page
+  - Easy to use Navigation menu with an easy to read layout
+  - Dropdown options in the products section of the navigation for more precise filtering of products
+  - My account option which allows users to create an account with us and then login
+  - View bag in the top right where a user can easily access all products added to their shopping bag
+  - Products page displaying all products of the desired category
+  - Filtering by price : Low to High and vice versa
+  - Filtering by Product name : A-Z and Z-A
+  - A button in the bottom right of the page that gets activated on scroll and when clicked on takes the user back to the top of the page
+  - Footer describing A-Z_Designers, Contact us section and our Policies
+  - A separate page for each policy
+  - Newsletter added to users when registering that they can select to register for.
+  - Terms & Conditions must be checked when registering a new account.
+  - Products Management only shown to superuser/admin
+  - Ability to create, edit and delete products and reviews
+  - Wishlist for users to save products for later
+  - Bag for items to be stored in before checkout
+  - Toast messages to inform the user of any changes such as success, alert and error messages.
+  - Message displaying the contents of the bag when a new item is added to the shopping bag.
+  - Easy to use checkout form
+  - Display of products in cards
+  - Individual product page shows product name, price, description, materials and allows to select quantity.
+  - Plus and Minus buttons on larger screens for improved UX when selecting quantity.
+  - Reviews page displaying reviews for selected product (if available)
+  - Ability to add a review
+  - View the recently created review in a review_detail page
+  - Go to specific product from the wishlist or remove the product
 
 - **User Features** 
-  - Fully functioning front end website for users to view products for sale
+  - Fully functioning front end website for users to view products for sale.
   - Ability to register an account and login/logout.
-  - Ability for users to place products into their shopping bag
-  - Ability for users to edit quantity of items and remove items directly in the bag
+  - Ability for users to place products into their shopping bag and store them there for a while.
+  - Ability for users to add items to a wishlist which saves them there for later.
+  - Ability for users to edit quantity of items and remove items directly in the bag and in the product description.
+  - Ability to view items selected for purchase in the checkout page.
+  - See a complete summary of the grand total price by displaying individual prices, quantities and delivery charge.
+  - A confirmation email gets sent to newly registered users.
+  - User must verify their email to confirm it is legitimate.
   - Fully responsive design using bootstrap and media queries for user on all devices.
+  - Profile section to view all previous orders in that account.
+  - Anonymous checkout for users who do not wish to register.
+  - Account information for shipping can be saved by users in their profile page (bug in saving this information with checkout form explained in bugs section)
+  - Profile information will fill in the checkout form with existing info.
+  
+- **Admin Features**
+  - Access to the admin panel where all users, profiles and orders can be seen and managed
+  - Adding of new products and users in the admin panel
+  - Access to product management within the website
+  - Edit existing products directly from the product management page
+  - Add new products from product management.
+  - Delete existing products from the website 
+  - Edit and delete any review left by users, directly from the website.
+  - This is a great example of the CRUD functionality that Code Institute has taught me.
   
 #### Accounts
 
@@ -76,22 +164,14 @@ Users who create accounts can store their shipping and billing informtion for a 
 This also allows the users to see their order history.
 
 
-- **Admin Features**
-  - As an admin only I have the ability to login to the admin panel
-  - Admin is able to see all orders made by users
-  - Admin is able to see all customer details
-  - Admin can create, edit or delete products directly from the website or admin panel
-
-
-- **Site Features**
-  - The home page is a clear landing page that shows this is a cclothing ecommerce store
+## Responsive Features for smaller screens
   - The navbar becomes compact into a hamburger menu icon for smaller screen devices
-  - Full navigation of products and filtering can be done in the navigation menu
-  - Accounts can also be accessed in the navigation 
-  - The users shopping bag updates when products are added to the bag
-  - For extra functionality there is a button which if clicked simply scrolls up to the top of the page in the products section
-  - Clicking on sections in the navbar opens up the desired page/ category of clothing
-  - Clicking on the heading will take the user back to the home page
+
+  
+ 
+
+  
+  
   
  -**Stripe**
   - Stripe is used to handle paayments on this website
