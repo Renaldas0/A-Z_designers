@@ -9,7 +9,7 @@
 
 If you wish to test account functionality, demo accounts have been provided below. Please note that not all error pages have been created and therefore on the occasional error the base django template will show up.
 
-To test website functionality, please find account details below.
+### To test website functionality, please find account details below
 
 | Username | Password | Desription |
 | ----- | -------- | ---------- |
@@ -34,6 +34,12 @@ Website functionality goals we strive to achieve over the next few website launc
   
 ## Business model
   - A-Z_Designers is a Business to Consumer (B2C) direct sellers of multiple brands of clothing products.
+
+## Design
+  - My website layout was inspired by Balenciaga, mainly their search bar spanning across the full width and the logo being in the middle.
+  - Designs were done using Photoshop and Figma as a base template layout (Images are in the **documentation/figma_template_designs** folder)
+  - The colour palette I went with is a very classy and simplistic white,brown,black blend ![colour_palette](https://user-images.githubusercontent.com/97538312/221379868-d84418f9-85fa-4290-98aa-1d990e46dc0e.png)
+  - More Branding images in the **documentation/branding** folder
 
 
 ## Agile Methodology
