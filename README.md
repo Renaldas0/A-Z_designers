@@ -92,15 +92,6 @@ Website functionality goals we strive to achieve over the next few website launc
 | User Story |  [#11](https://github.com/Renaldas0/A-Z_designers/issues/11) | As a shopper I can see if a product is out of stock so that I don't waste time reading about it and then find out it is not available
 | User Story |  [#20](https://github.com/Renaldas0/A-Z_designers/issues/20) | As a user I would like to be able to check where my order is and when it is expected to be delivered so that I can plan my day accordingly to accept the delivery.
 | Admin |  [#11](https://github.com/Renaldas0/A-Z_designers/issues/11) | Implement a feature for the website where first time buyers can use a discount code for a 10% discount on their purchase.
-
-
-### General Github issues
-  - Implement a feature for the website where first time buyers can use a discount code for a 10% discount on their purchase.
-  - Write up a descriptive readme file to meet the projects requirements.
-  - Set up the project app and install required packages such as , psycopg, django, python, crispy forms and storages.
-  - Setup the base.html template that will span across the other templates, this mostly consists of header and footer and the other html templates will go in between.
-  - Use figma to design the templates I will need across the site. Home page, products, individual product, reviews page, product management, login and signup forms, checkout, bag and wishlist.
-  - Import jQuery, Bootstrap, fontawesome, bulma and favicon.
   
 **Gain Shopper Trust**
 | # | Information a Shopper may need in order to Make a Buying Decision | Delivered |
@@ -196,16 +187,13 @@ This also allows the users to see their order history.
 
 
 ## Responsive Features for smaller screens
+
   - The navbar becomes compact into a hamburger menu icon for smaller screen devices
+  - Products align into columns of 2 on tablets and into columns of 1 on mobiles.
 
-  
- 
-
-  
-  
   
  -**Stripe**
-  - Stripe is used to handle paayments on this website
+  - Stripe is used to handle payments on this website
   
 ## Main section
 ![main-screenshot](https://user-images.githubusercontent.com/97538312/201192933-98a6b956-1bc9-43e9-84d8-8ba22933ffd2.jpg)
