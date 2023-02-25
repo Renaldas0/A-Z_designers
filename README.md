@@ -98,6 +98,16 @@ Website functionality goals we strive to achieve over the next few website launc
 | 6 | Product's materials  | ✅ |
 | 7 | Delivery cost | ✅ |
 | 8 | Product Reviews and Rating | ✅ |
+| 9 | Product Image | ✅ |
+
+## SEO 
+  - Search Engine Optimization is targetted with the use of Products containing descriptions and the type of product in the name.
+  - Keywords added to the meta tags, these include : "clothes, clothing, ecommerce, shopping, shop, online shopping, womens clothes, 
+mens clothes, t-shirts, trousers, pants, sale, fashion, new style, new collection,
+bags, watches, luxury watches, high quality clothing, designer clothes, new, trending, delivery, shipping"
+  - Meta tags for description : "A-Z_Designers is an online shop for your clothing desires and needs.
+    View our range of affordable, high quality and trending selection of clothing and accessories including watches, belts and bags!"
+  - 
 
 
 ## **Site Features**
@@ -158,7 +168,7 @@ Website functionality goals we strive to achieve over the next few website launc
   
 #### Accounts
 
-This is where all customer information is retained via the custom user model. I also made the decision to use Django-allauth which added the ability to override the username field, using the email address as the login. It also brought with it the ability to verify email addresses and reset passwords.
+This is where all customer information is retained via the **USER model**. I also made the decision to use Django-allauth which added the ability to override the username field, using the email address as the login. It also brought with it the ability to verify email addresses and reset passwords.
 
 I created personalised Login, Sign Up, Sign out, forms with the help of crispy forms.
 Crispy forms was installed using pip3 install django-crispy-forms and then add this to the apps section in settings.py
