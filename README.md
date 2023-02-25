@@ -52,32 +52,47 @@ Website functionality goals we strive to achieve over the next few website launc
 
 ## User Stories
 
-### Customer
-  - As a shopper I can see the products for sale so that I can select items to buy
-  - As a Shopper I can read product description so that I know more about the product being sold
-  - As a shopper I can quickly navigate to my desired product so that my shopping experience is much faster and smoother.
-  - As a shopper I can see how many products I have added to my bag and price total so that I know exactly how much I have selected/selected for.
-  - As a site user I can register quickly so that I can save my details to make shopping here again a faster experience
-  - As a site user I can login so that I can access my personal account information and history
-  - As a site user I can recover my password so that I can still login to my account if I forget my login credentials
-  - As a site user I can receive an email confirmation so that I know for sure my account has been registered to the website
-  - As a shopper I can sort for products by various stats so that I can quickly and efficiently find what I am looking for
-  - As a shopper I can search for a product so that I can immediately see if the site offers that product
-  - As a shopper I can select the size and quantity so that I get the correctly sized article of clothing and more than one if I desire
-  - As a site user I can check the company's social media so that I can further verify their credibility and follow them
-  - As a site user I can contact the company so that any questions I have can be addressed
-  - As a user I would like to be able to select the quantity of a specific product without having to click on it multiple times, so that my shopping experience is         smoother and faster.
-  - As a user I want to be able to enter my payment details securely without the fear of them getting leaked and use trusted and well known payment methods.
-  - As a user I want to receive confirmation of my order to know everything went through and I can expect my order to be on the way.
-  - As a user I am not entirely comfortable giving my information to register and would like the option to shop without creating an account.
-  
-### Site Owner
-  - As a website owner I want users to have an enjoyable UX and therefore to adapt to errors happening include a not so boring 404 error page.
-  - As a site owner I want to add new products and have them automatically display on the website, so that customers can purchase them.
-  - As a site owner I want to be able to edit product details, for example, price and stock so that products can be updated.
-  - As a site owner I want to be able to delete products from display, so that if I have stock issues I can prevent customers from viewing it.
-  - As a site owner I want to be able to link customer orders to the Stripe PaymentIntent dashboard, so that I can verify custom payment details, if I need to.
-  - As a site owner I want to be able to manage customer reviews, so that any inappropriate content can be removed if necessary.
+|  Type  | id  |  Content |
+| ------ | ------ | ------ |
+| User Story |  [#1](https://github.com/Renaldas0/A-Z_designers/issues/1) | As a shopper I can see the products for sale so that I can select items to buy.
+| User Story |  [#2](https://github.com/Renaldas0/A-Z_designers/issues/2) | As a Shopper I can read product description so that I know more about the product being sold.
+| User Story |  [#3](https://github.com/Renaldas0/A-Z_designers/issues/3) | As a shopper I can quickly navigate to my desired product so that my shopping experience is much faster and smoother.
+| User Story |  [#4](https://github.com/Renaldas0/A-Z_designers/issues/4) | As a shopper I can see how many products I have added to my bag and price total so that I know exactly how much I have selected/selected for.
+| User Story |  [#5](https://github.com/Renaldas0/A-Z_designers/issues/5) | As a site user I can register quickly so that I can save my details to make shopping here again a faster experience.
+| User Story |  [#6](https://github.com/Renaldas0/A-Z_designers/issues/6) | As a site user I can login so that I can access my personal account information and history
+| User Story |  [#7](https://github.com/Renaldas0/A-Z_designers/issues/7) | As a site user I can recover my password so that I can still login to my account if I forget my login credentials
+| User Story |  [#8](https://github.com/Renaldas0/A-Z_designers/issues/8) | As a site user I can receive an email confirmation so that I know for sure my account has been registered to the website
+| User Story |  [#9](https://github.com/Renaldas0/A-Z_designers/issues/9) | As a shopper I can sort for products by category so that I can quickly and efficiently find what I am looking for
+| User Story |  [#10](https://github.com/Renaldas0/A-Z_designers/issues/10) | As a shopper I can search for a product so that I can immediately see if the site offers that product
+| User Story |  [#12](https://github.com/Renaldas0/A-Z_designers/issues/12) | As a shopper I can select the size and quantity so that I get the correctly sized article of clothing and more than one if I desire
+| User Story |  [#13](https://github.com/Renaldas0/A-Z_designers/issues/13) | As a site user I can check the company's social media so that I can further verify their credibility and follow them
+| User Story |  [#14](https://github.com/Renaldas0/A-Z_designers/issues/14) | As a site user I can contact the company so that any questions I have can be addressed
+| User Story |  [#15](https://github.com/Renaldas0/A-Z_designers/issues/15) | As a user I would like to be able to select the quantity of a specific product without having to click on it multiple times, so that my shopping experience is smoother and faster.
+| User Story |  [#18](https://github.com/Renaldas0/A-Z_designers/issues/18) | As a user I want to be able to enter my payment details securely without the fear of them getting leaked and use trusted and well known payment methods.
+| User Story |  [#19](https://github.com/Renaldas0/A-Z_designers/issues/19) | As a user I want to receive confirmation of my order to know everything went through and I can expect my order to be on the way.
+| User Story |  [#21](https://github.com/Renaldas0/A-Z_designers/issues/21) | As a user I am not entirely comfortable giving my information to register and would like the option to shop without creating an account.
+| User Story |  [#22](https://github.com/Renaldas0/A-Z_designers/issues/22) | As a shopper I can see reviews and product ratings so that i know from someone else's perspective who has already purchased a product if it was satisfactory.
+| Admin |  [#17](https://github.com/Renaldas0/A-Z_designers/issues/17) | As a website owner I want users to have an enjoyable UX and therefore to adapt to errors happening include a not so boring 404 error page.
+| Admin |  [#23](https://github.com/Renaldas0/A-Z_designers/issues/23) | As a site owner I want to add new products and have them automatically display on the website, so that customers can purchase them.
+| Admin |  [#24](https://github.com/Renaldas0/A-Z_designers/issues/24) | As a site owner I want to be able to edit product details, for example, price and stock so that products can be updated.
+| Admin |  [#25](https://github.com/Renaldas0/A-Z_designers/issues/25) | As a site owner I want to be able to delete products from display, so that if I have stock issues I can prevent customers from viewing it.
+| Admin |  [#26](https://github.com/Renaldas0/A-Z_designers/issues/26) | As a site owner I want to be able to link customer orders to the Stripe PaymentIntent dashboard, so that I can verify custom payment details, if I need to.
+| Admin |  [#27](https://github.com/Renaldas0/A-Z_designers/issues/27) | As a site owner I want to be able to manage customer reviews, so that any inappropriate content can be removed if necessary.
+| Setup |  [#28](https://github.com/Renaldas0/A-Z_designers/issues/28) | Set up the project app and install required packages such as , psycopg, django, python, crispy forms and storages.
+| Setup |  [#29](https://github.com/Renaldas0/A-Z_designers/issues/29) | Setup the base.html template that will span across the other templates, this mostly consists of header and footer and the other html templates will go in between.
+| Setup |  [#30](https://github.com/Renaldas0/A-Z_designers/issues/30) | Use figma to design the templates I will need across the site. Home page, products, individual product, reviews page, product management, login and signup forms, checkout, bag and wishlist.
+| Setup |  [#31](https://github.com/Renaldas0/A-Z_designers/issues/31) | Import jQuery, Bootstrap, fontawesome, bulma and favicon.
+| Setup |  [#32](https://github.com/Renaldas0/A-Z_designers/issues/32) | Write up a descriptive readme file to meet the projects requirements.
+
+
+### User stories that are planned for next deployment
+
+|  Type  | id  |  Content |
+| ------ | ------ | ------ |
+| User Story |  [#11](https://github.com/Renaldas0/A-Z_designers/issues/11) | As a shopper I can see if a product is out of stock so that I don't waste time reading about it and then find out it is not available
+| User Story |  [#20](https://github.com/Renaldas0/A-Z_designers/issues/20) | As a user I would like to be able to check where my order is and when it is expected to be delivered so that I can plan my day accordingly to accept the delivery.
+| Admin |  [#11](https://github.com/Renaldas0/A-Z_designers/issues/11) | Implement a feature for the website where first time buyers can use a discount code for a 10% discount on their purchase.
+
 
 ### General Github issues
   - Implement a feature for the website where first time buyers can use a discount code for a 10% discount on their purchase.
