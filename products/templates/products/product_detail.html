@@ -44,9 +44,9 @@
                 <!---------------------------------------------Edit and remove product options-->
                 {% if request.user.is_superuser %}
                 <small class="ml-2">
-                    <a class="button text-warning my-2" href="{% url 'edit_product' product.id %}">Edit
+                    <a class="button btn-warning my-2" href="{% url 'edit_product' product.id %}">Edit
                         Product</a>
-                    <a class="button text-danger my-2" href="{% url 'delete_product' product.id %}">Delete
+                    <a class="button btn-danger my-2" href="{% url 'delete_product' product.id %}">Delete
                         Product</a>
                 </small>
                 {% endif %}

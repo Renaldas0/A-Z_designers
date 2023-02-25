@@ -4,17 +4,23 @@
 <html lang="en">
 
 <head>
-    {% block meta %}
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="clothes, clothing, ecommerce, shopping, shop, online shopping, womens clothes, 
-                                   mens clothes, t-shirts, trousers, pants, sale, fashion, new style, new collection,
-                                   bags, watches, luxury watches, high quality clothing, designer clothes">
-    {% endblock %}
+    <meta name="copyright" content="A-Z_Designers">
+    <meta name="author" content="Renaldas Bendikas">
+    <meta
+        keywords="clothes, clothing, ecommerce, shopping, shop, online shopping, womens clothes, 
+                    mens clothes, t-shirts, trousers, pants, sale, fashion, new style, new collection,
+                    bags, watches, luxury watches, high quality clothing, designer clothes, new, trending, delivery, shipping">
+    <meta name="description"
+        content="A-Z_Designers is an online shop for your clothing desires and needs.
+                View our range of affordable, high quality and trending selection of clothing and accessories including watches, belts and bags!">
 
     {% block extra_meta %}
     {% endblock %}
+    <!-- Stack overflow solution to avoiding favicon 404 error -->
+    <link rel="shortcut icon" href="#">
 
     <!-- Bulma -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">

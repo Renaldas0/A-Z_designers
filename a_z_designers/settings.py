@@ -88,7 +88,7 @@ TEMPLATES = [
 ]
 
 # To resolve csrf token issues
-CSRF_TRUSTED_ORIGINS = ['https://8000-renaldas0-azdesigners-9oopqfb2v8v.ws-eu85.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-renaldas0-azdesigners-9oopqfb2v8v.ws-eu85.gitpod.io', 'https://8000-renaldas0-azdesigners-9oopqfb2v8v.ws-eu88.gitpod.io/']
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
@@ -111,22 +111,6 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'a_z_designers.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/databases
-
-# if 'DATABASE_URL' in os.environ:
-#     DATABASES = {
-#         'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-#     }
-# else:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#         }
-#     }
 
 if 'DATABASE_URL' in os.environ:
     # Use the deployed db stored in heroku config vars

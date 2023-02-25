@@ -88,10 +88,10 @@
                                     {% endif %}
                                     {% if request.user.is_superuser %}
                                     <small class="ml-2">
-                                        <a class="text-warning button my-2"
+                                        <a class="btn-warning button my-2 mr-1"
                                             href="{% url 'edit_product' product.id %}">Edit
                                             Product</a>
-                                        <a class="text-danger button my-2"
+                                        <a class="btn-danger button my-2 ml-1"
                                             href="{% url 'delete_product' product.id %}">Delete
                                             Product</a>
                                     </small>
