@@ -9,14 +9,19 @@
 
 If you wish to test account functionality, demo accounts have been provided below. Please note that not all error pages have been created and therefore on the occasional error the base django template will show up.
 
-### To test website functionality, please find account details below
-
+## Test website functionality with these accounts
 | Username | Password | Desription |
 | ----- | -------- | ---------- |
 | hodedar | 11@@11@@ | Customer account created with temp-mail and consists of multiple orders and reviews. (testing email confirmation was successful) |
 | AZ_Designer_super | @@11@@11 | Admin account with create and update permissions to all custom models, these are accessible in the access admin area and product management on the website account section. |
 
-## Future Goals 
+
+## Products and accounts with testing done to them
+- I have added some products to the wishlist on both accounts
+- A purchase has been made on the admin account that shows up in my profile
+- Reviews have been left in the NEW ARRIVALS category, on the gold womens watch, black belt and women's dress.
+
+## Future Goals of A-Z_Designers
 A-Z_Designers' plan is to expand rapidly by adding more and more new products for sale every week.
 We plan to also increase the choice of sizes, variety of products and even colours.
 Add filtering by rating
@@ -35,11 +40,12 @@ Website functionality goals we strive to achieve over the next few website launc
 ## Business model
   - A-Z_Designers is a Business to Consumer (B2C) direct sellers of multiple brands of clothing products.
 
-## Design
+## Design & Branding
   - My website layout was inspired by Balenciaga, mainly their search bar spanning across the full width and the logo being in the middle.
   - Designs were done using Photoshop and Figma as a base template layout (Images are in the **documentation/figma_template_designs** folder)
   - The colour palette I went with is a very classy and simplistic white,brown,black blend ![colour_palette](https://user-images.githubusercontent.com/97538312/221379868-d84418f9-85fa-4290-98aa-1d990e46dc0e.png)
-  - More Branding images in the **documentation/branding** folder
+  - My choice of font is a very classy yet not overly extravagant 'PT Serif' ![font_choice](https://user-images.githubusercontent.com/97538312/221405870-6175dbc9-04a6-4268-8789-97b90c25b5ec.png)
+  - All Branding images are in the **documentation/branding** folder
 
 
 ## Agile Methodology
