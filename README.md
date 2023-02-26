@@ -16,8 +16,7 @@
 | hodedar | 11@@11@@ | Customer account created with temp-mail and consists of multiple orders and reviews. (testing email confirmation was successful) |
 | AZ_Designer_super | @@11@@11 | Admin account with create and update permissions to all custom models, these are accessible in the access admin area and product management on the website account section. |
 
-
-## Products and accounts with testing done to them
+##Products and accounts with testing done to them
 - I have added some products to the **wishlist** on both accounts
 - A purchase has been made on both accounts that shows up in the **my profile** section
 - **Reviews** have been left in the NEW ARRIVALS category, on the gold womens watch, black belt and women's dress.
@@ -440,24 +439,63 @@ Wishlist template
 
 ## Payments
   - Stripe is used to handle payments on this website
-  
-
-
-
-## Unfixed Bugs 
+  - The set up involved getting stripe public and secret keys and adding those to heroku config vars
+  - Testing was done to confirm payments intents go through and the charge is succeeded.
+  - Webhook handling in the checkout app takes care of issues like refreshing the page before successful payment to avoid errors or exploiting bugs.
   
   
 ## Testing 
 - For the testing process I used print statements and kept running the code after a new function was added which was noticeable when run
+- With new functionalities added I would straight away test them
 - Verified the HTML using the W3C HTML validator and all tests passed : https://validator.w3.org/
 - Verified CSS using the Jigsaw w3 css validator to confirm all css is valid : https://jigsaw.w3.org/css-validator/
 - Tested the python code by running it through PEP8 online :  http://pep8online.com/
+- I cleared up as many Python minor errors as possible
+- The only remaining errors were to indicate that the line is too long
 - JsHint was used to check JavaScript code : https://jshint.com/
-- The only errors were to indicate that the line is too long
-- I manually tested that errors in the form fields show up and required fields cannot be left empty
-- Tested that messages get displayed when Logging in, adding to the bag, making any adjustments to products, on successfull or failed checkout and signing out.
 
-### Message Testing / Toasts
+### Manual Testing
+- I manually tested that **errors in the form fields** show up and required fields cannot be left empty.
+- Tested that messages get displayed when Logging in, adding to the bag, making any adjustments to products, on successfull or failed checkout, leaving a review, editing a review, adding products to a wishlist and signing out.
+- Toasts successfully showed up in all occassions
+
+#### Message Testing / Toasts
+Alert Message
+![alert_message_test](https://user-images.githubusercontent.com/97538312/221433147-ca1d68c0-9cea-4844-8408-b565e25c4c54.png)
+Error Message
+![error_message_test](https://user-images.githubusercontent.com/97538312/221433157-a4e82393-2924-4d91-b220-5b6193db6203.png)
+Success Message
+![success_message_test](https://user-images.githubusercontent.com/97538312/221433164-4ae48c8e-c2eb-4a6b-9bdd-b8bae4f5cf60.png)
+
+#### Test product sorting
+Price low to high
+![price_low_to_high_sorting](https://user-images.githubusercontent.com/97538312/221433177-120fd01d-d5e4-470c-8196-20c52ca205bf.png)
+Price high to low
+![price_high_to_low_sorting](https://user-images.githubusercontent.com/97538312/221433183-9c402a2c-1917-4c41-840e-6f0b66b6a3d9.png)
+A-Z sorting
+![a-z_sorting](https://user-images.githubusercontent.com/97538312/221433191-b53de593-a74c-4434-b650-1c7f522e62b1.png)
+Z-A sorting
+![z-a_sorting](https://user-images.githubusercontent.com/97538312/221433194-7ea5a9e4-0b80-4d29-bd7b-fe1e48b35885.png)
+
+#### Search bar 
+(Searched for tshirt)
+![search_sorting_tshirt](https://user-images.githubusercontent.com/97538312/221433237-16c03832-1178-4154-9674-e03461a08620.png)
+
+#### Test that bag contents show up in toast message when a new product is added
+![added_to_bag_toast_mobile](https://user-images.githubusercontent.com/97538312/221433337-662c927a-6288-4028-ad0b-4098c8215371.png)
+
+- Tested all links on the website and confirmed external links to social media open a new tab.
+- Tested products get added to database and website when created in product management
+![add_product_no_media_test](https://user-images.githubusercontent.com/97538312/221433453-743a6900-239e-4443-9bdc-f08e3a0f5ea4.png)
+- Tested No media image url 
+![products_no_image](https://user-images.githubusercontent.com/97538312/221433458-4268f2a1-629a-4a52-a459-bc665451e0a1.png)
+
+- Tested that quantity and size gets displayed in the order summary
+- Tested checkout confirmation 
+
+- Tested Stripe payments
+![Screenshot (214)](https://user-images.githubusercontent.com/97538312/221433557-1cc980ab-8868-4fe2-a75b-657238b568fd.png)
+![Screenshot (213)](https://user-images.githubusercontent.com/97538312/221433575-5a8919f0-3f20-4899-af0b-daf4c56cc631.png)
 
 
 ### Form field testing 
@@ -465,10 +503,6 @@ Wishlist template
 
 ### Lighthouse test 
 ![lighthouse](https://user-images.githubusercontent.com/97538312/204099655-1f7ccfd5-edce-49d2-9a56-dc051040ef09.jpg)
-
-
-
-
 
 
 ## Deployment 
@@ -483,7 +517,10 @@ Wishlist template
 
   ### Elephant SQL
   - The database is deployed using ElephantSQL : https://www.elephantsql.com/
+    - The region I selected allows for cloud storage with amazon AWS
+    - Then I proceeded to set up an ElephantSQL database
     - This is done by creating a new instance on ElephantSQL 
+    - Naming It
     - Select Table quries in BROWSER and select an option that looks familiar
     - The DATABASE URL is then pasted into heroku config vars 
 
@@ -499,8 +536,42 @@ Wishlist template
   - The code is deployed and pushed to a Github branch which is then linked to heroku and set to automatically deploy with every push
 
   ### Amazon AWS Storage
+ - To setup Amazon AWS I first of all searched IAM Management Console on amazon aws
+ - ![amazon_aws](https://user-images.githubusercontent.com/97538312/221433828-eaf1f9e4-3e03-41c8-b3f0-b71ae7a43864.png)
+ - Using this panel I then created a **User Group**
+ - Secondly created a *User* and linked it to the above **User Group*
+ - And finally created a Policy which was linked to this *User*
+ - Then I searched up "S3" which is scalable storage in the cloud
+ - Created a bucket into which I added my media and static files by linking my project to Heroku
+
+
+## Existing Bugs and Issues
+  - When a product is added to the bag, if it is then deleted from the website this causes a server error 500
+  - When saving information in the checkout form, it does not save it to the profile from there, however it does show up in the checkout form if filled out in the user profile. 
+  - Filled out in Profile
+  ![delivery_info_profile](https://user-images.githubusercontent.com/97538312/221434975-099b74ce-270b-45bc-b2c3-0530ba3e5934.png)
+  - Auto filled in checkout
+![delivery_info_prefilled](https://user-images.githubusercontent.com/97538312/221434979-98ab25fe-7f61-4e1b-9c55-794c01d50bde.png)
+  - Changed in checkout form
+![delivery_info_checkout_change](https://user-images.githubusercontent.com/97538312/221434993-398aad5b-bad1-4f6e-a4ff-85444c6ee8ba.png)
+  - No change appears
+![no_change_in_delivery_info](https://user-images.githubusercontent.com/97538312/221434999-2bd961df-43e0-443c-9dea-ebdd3c5a1f63.png)
   
+  - Horizontal scroll bar appears on the wishlist page, I attempted to set overflow and width rules but was unable to fix this thus far.
+  - In the bag page if the bag is empty, the footer is just below the div and does not stay at the bottom of the page. I attempted to set a height to the body and to the div containing the empty bag text but this didn't work or made the layout much worse when a product was then added to the bag. 
+  - I will continue to work on these issues for the next release but the scheduled release of the website for the 27th of February did not allow enough time.
+
 
 ## Credits
-  - Credit 1 etc
+  - Credits to Code Institute Boutique Ado project for inspiration in getting this project started and some styling 
+    - Such as The arrow to scroll up to the top of the page
+  - Credits to *kaggle* which is where I got dataset images so that I can use as my products
+  - 
+  Media
+    - Background image and error 404 image were both taken from Pexels which is a free copyright free website for images.
+  - Emails are thanks to gmail
+  - Policies were generated by TermsFeed(https://app.termsfeed.com/)
+
+# *Copyrights*
+&copy; 2023 A-Z_Desingners by Renaldas Bendikas (An e-commerce Full Stack Developer Project)
   
