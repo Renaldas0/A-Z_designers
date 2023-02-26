@@ -3,7 +3,7 @@
 ![am_i_responsive](https://user-images.githubusercontent.com/97538312/221374432-c301bff7-83df-4fa4-b443-0bf106b2dd4e.png)
 
 
-### [A-Z_Designers](https://a-z-designers.herokuapp.com/) is my final milestone project at [Code Institute] and it is a full stack E-Commerce website developed to be a website for an online clothing store. This website allows users to purchase clothing that is in stock as Anonymous users and even create an account which allows them to save shipping/billing details and previous orders. This project demonstrates my learning and understanding throughout the course of full stack website development.
+### [A-Z_Designers](https://a-z-designers.herokuapp.com/) is my final milestone project at Code Institute and it is a full stack E-Commerce website developed to be a website for an online clothing store. This website allows users to purchase clothing that is in stock as Anonymous users and even create an account which allows them to save shipping/billing details and previous orders. This project demonstrates my learning and understanding throughout the course of full stack website development.
 
 ### I believe I produced a website that is very adaptable and can be repurposed for many ecommerce applications, this includes subscriptions and transactional services. There are numerous features which I would like to have added for submission of this project, however, due to limited time this was not possible for the moment.
 
@@ -237,7 +237,8 @@ This will take the admin to the edit product page and all existing details will 
  My account offers a selection of register or login options for non logged in users and does not display the wishlist, profile or product management options (admin only)
 ![not_logged_in_myaccount](https://user-images.githubusercontent.com/97538312/221411486-0ca7dfbc-c547-4326-8489-f2a099300e3a.png)
 
- ![my_account_dropdown](https://user-images.githubusercontent.com/97538312/221409572-8001a8bc-1996-490a-8b39-64c25128de29.png)
+** Account registration and login forms**
+![my_account_dropdown](https://user-images.githubusercontent.com/97538312/221409572-8001a8bc-1996-490a-8b39-64c25128de29.png)
 Sign in
 ![signin_template](https://user-images.githubusercontent.com/97538312/221411175-25738817-3664-44bf-83fd-f63f2916e52e.png)
 Register
@@ -252,28 +253,48 @@ Confirm Email
 ![confirm_email_template](https://user-images.githubusercontent.com/97538312/221411698-2fe9ae9f-f531-4a81-aff3-34fedcb358d7.png)
 
 
+## Wishlist
+Wishlist is only accessible to logged in users as it appears in the my account dropdown menu and can only be accessed through there
+![wishlist_template](https://user-images.githubusercontent.com/97538312/221416268-8f578403-0f12-46bb-8e79-7604ee658ef6.png)
+Empty Wishlist
+![empty_wishlist](https://user-images.githubusercontent.com/97538312/221415235-dccc4011-dc2e-4313-8288-f0f65d01cf4e.png)
 
+## My Profile
+This section allows users to see previously made purchases (on the right)
+And to update their shipping details for a faster checkout (on the left)
+![my_profile_template](https://user-images.githubusercontent.com/97538312/221415795-a45a923a-36b7-44a1-a066-bea742d49ef8.png)
+Delivery information filled in on the form  (left)
+![delivery_info_profile](https://user-images.githubusercontent.com/97538312/221415826-9fbd83a1-496a-4127-9d4a-0862c908d1e4.png)
+This delivery information is prefilled in the checkout (test complete)
+![delivery_info_prefilled](https://user-images.githubusercontent.com/97538312/221415834-35305d14-b037-45db-bfaa-d85b05a5dba9.png)
 
+## Reviews 
+Reviews are found at the bottom of the product detail page (as shown above in the product detail description)
+- The option to leave a review displays a text that a user must first log in to an account to leave a review and when clicked on will redirect to the login form
+- All reviews can still be read by the anonymous user
+**Review page**
+Add a review 
+Logged in users can leave a review at the bottom left side of the product detail page
+![add_review](https://user-images.githubusercontent.com/97538312/221416714-79c5f48f-4b68-48cf-8fe6-cd5ec2242266.png)
+Existing reviews 
+![reviews](https://user-images.githubusercontent.com/97538312/221416731-b5747feb-834f-43cd-9f42-1faf6a93f364.png)
+New Review detail
+![new_review_detail](https://user-images.githubusercontent.com/97538312/221416749-36ded249-8d7a-435d-b0a9-34ef1d529be1.png)
 
+**Edit Review** (admin)
+![edit_review](https://user-images.githubusercontent.com/97538312/221416914-5d3e0b32-eac4-4927-a077-4ad9f8f38f37.png)
+Deleted review
+![deleted_review](https://user-images.githubusercontent.com/97538312/221416926-89b5d0e3-3e2e-4631-86b6-9fc208a27dfc.png)
+  
+  
+## Checkout 
+Checkout page displays the order summary (Left)
+Checkout form with user details and shipping details (right)
+![checkout_template](https://user-images.githubusercontent.com/97538312/221417198-47e32270-a194-44f3-8307-955e58d60c2c.png)
+After successful checkout , a success message shows and a checkout summary
+![checkout_summary](https://user-images.githubusercontent.com/97538312/221417355-f67c6f65-809d-4cd8-a3e2-88420049d971.png)
 
-
-
-
-
-
-
-**Reviews**
-  - Logged in users can leave a review at the bottom left side of the product detail page
-  ![no_reviews_text](https://user-images.githubusercontent.com/97538312/221409639-cebb6a67-509e-4fc2-b56f-e77d017c3b94.png)
-
-**Reviews**
-  - The option to leave a review displays a text that a user must first log in to an account to leave a review and when clicked on will redirect to the login form
-  - All reviews can still be read by the anonymous user
- **Checkout**
-  - Checkout information will not be saved as there is no way of tracking the user making a purchase
- **Wishlist**
-  - Wishlist is not accessible as it only displays in the menu to logged in users
-  - 
+ 
  
 #### Accounts
 
