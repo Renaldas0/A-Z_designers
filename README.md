@@ -390,6 +390,10 @@ After successful checkout , a success message shows and a checkout summary
 - Add a review
 ![add_review_mobile](https://user-images.githubusercontent.com/97538312/221426271-b9930273-834c-4ca1-9098-9d41fb024a30.png)
 
+ **Error 404 Page**
+ ![error_404_template](https://user-images.githubusercontent.com/97538312/221435979-5c899750-a724-459a-84bb-6a4c1130c0e2.png)
+
+
   ## Responsiveness on tablet 
 - Checkout 
 ![checkout_tablet](https://user-images.githubusercontent.com/97538312/221426390-b71a4b22-6188-489b-9a50-96ed0e48450d.png)
