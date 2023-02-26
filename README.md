@@ -56,6 +56,16 @@ Add filtering by rating
   - Which can be left till last
   - When an issue is completed it gets moved from the in progress table to the completed table 
   - Completed issues also get marked as 'closed'
+  
+  ### Github Projects
+ GitHub Projects was used to manage the development of the site. It allowed me to break down large issues into smaller issues and focus on these while building it up to the completed project. I also used labels to distinguish the issues which are part of the setup, of the documentation, the must haves and which are not as important.
+  ![github_issues](https://user-images.githubusercontent.com/97538312/221426841-9e2d6388-d29f-4886-9d34-8120c333792e.png)
+ Closed Isssues
+ ![closed_issues](https://user-images.githubusercontent.com/97538312/221426834-f8c7edd6-69f7-49bc-9c93-fc5d89167623.png)
+ues
+  Open Issues
+  ![open_issues](https://user-images.githubusercontent.com/97538312/221426852-52f444f7-5710-4a77-852c-6142a13e4a96.png)
+
 
 ## User Stories
 
@@ -120,6 +130,58 @@ mens clothes, t-shirts, trousers, pants, sale, fashion, new style, new collectio
 bags, watches, luxury watches, high quality clothing, designer clothes, new, trending, delivery, shipping"
   - Meta tags for description : "A-Z_Designers is an online shop for your clothing desires and needs.
     View our range of affordable, high quality and trending selection of clothing and accessories including watches, belts and bags!"
+    
+ ## Database ERD (Entity relationship diagram)
+This ER diagram captures the relationships between real-world entities. The entities are the data points of objects such as persons, places and things and together with their attributes, compose their domain, ie, their individual table.
+![Screenshot (236)](https://user-images.githubusercontent.com/97538312/221423917-0e30f06f-d14b-44cd-a229-2dba1a4c5171.png)
+
+## Data Modelling
+Each of the models below are used for the project and contain the fields and behaviours of the data being created and stored.
+
+### User Model
+  - The User model is a component of Django's Authentication system and contains information about the user.
+  - The User model contains the following fields: username, email, first_name, last_name, password, is_staff, is_active, is_superuser, date_joined, and last_login.
+ 
+### User Profile Model (Custom)
+  - The UserProfile model is an extension of the Django User model and has a one-to-one relationship with it.
+  - The UserProfile model contains the following fields that I customised to fit the requirements of my websites needs: user, default_address, default_city, default_county, default_postcode and default_country.
+  - I did not wish to record their phone number as some may not be comfortable sharing this and our business does not intend to contact users directly over the phone
+  
+### Category Model (Customized)
+  - To my category model I set it up in a way to categorise products first of all by Gender, then name and friendly_name which is displayed to users.
+  
+### Product Model (Customized)
+  - The Product model contains the following fields: category, name, description, keywords, sku, colour, has_sizes, materials, , price and image.
+  - Sku is a unique code identifier that i have limited to 8 characters and shows gender, abbreviates the product, colour and then takes a number i.e mnstrbl2 (men's trousers black 2)
+  - The main purpose of the keywords is to add to search engine for the search bar, this opens up more choices for a user to enter a search criteria and find what they are looking for. Description is also scanned for these words and the name field. 
+  - Has_sizes is a boolean field which checks products that do have a size selection and will in turn display the size selection option in product_detail.
+  
+### Order Model (customised)
+  - The Order model contains the following fields: order_number, user_profile, full_name, email, country, postcode, city, address, date, delivery_cost, product_total, grand_total, original_bag and stripe_pid.
+  - It contains UserProfile as a ForeignKey.
+ 
+### OrderLineItem Model (customized)
+  - The OrderLineItem model contains the following fields: order, product, product_size, quantity and lineitem_total.
+  - It contains Order and Product as ForeignKeys.
+ 
+### Review Model (Custom)
+  - The Review model contains the following fields: product, user, rating, review and date.
+  - It contains Product and User as ForeignKeys
+  - Rating has a choice of RATING_CHOICES variable ranging from 1 to 5 for users to select.
+  - Review field is a text field where any comments can be made about the product. 
+  - The review form only requires a review and rating, and sets the username and date automatically.
+
+### Wishlist Model (Custom)
+  - The Wishlist model contains the following fields: user_profile, product and date_added.
+  - It contains user_profile and product as ForeignKeys.
+
+#### Started but limited time did not allow me to complete another model I wanted to implement
+  - This is the **Discount** model
+  - The purpose I see for this will be to generate new users a discount code ONLY for their FIRST purchase with us.
+  - User would need to be fully registered
+  - I have model created and the admin panel layout done but to implement it into the view and do all necessary testing will have taken me over the deadline
+  - This model was not a priority for the goals of this website's launch.
+  
 
 
 ## Site Features
@@ -167,6 +229,8 @@ bags, watches, luxury watches, high quality clothing, designer clothes, new, tre
   - Anonymous checkout for users who do not wish to register.
   - Account information for shipping can be saved by users in their profile page (bug in saving this information with checkout form explained in bugs section)
   - Profile information will fill in the checkout form with existing info.
+  - Users who create accounts can store their shipping and billing informtion for a faster shopping experience using the profiles custom model. This takes in some     basic information from the user when the user is completing their checkout form.
+  - This also allows the users to see their order history.
 
 ## Admin Features
   - Access to the admin panel where all users, profiles and orders can be seen and managed
@@ -178,7 +242,7 @@ bags, watches, luxury watches, high quality clothing, designer clothes, new, tre
   - Edit and delete any review left by users, directly from the website.
   - This is a great example of the CRUD functionality that Code Institute has taught me.
 
-## Full site Layout (desktop) with images
+## Full site Layout with images 
   **Home**
 ![home_template](https://user-images.githubusercontent.com/97538312/221409706-15b62a3f-e589-42b8-8315-886cf34c2610.png)
 The dropdown menu for selecting categories or products by gender
@@ -294,25 +358,86 @@ Checkout form with user details and shipping details (right)
 After successful checkout , a success message shows and a checkout summary
 ![checkout_summary](https://user-images.githubusercontent.com/97538312/221417355-f67c6f65-809d-4cd8-a3e2-88420049d971.png)
 
- 
- 
-#### Accounts
+## Policies
+![privacy_policy_template](https://user-images.githubusercontent.com/97538312/221426463-ac0cf624-c2e7-4a86-8a20-8983cb220562.png)
 
-This is where all customer information is retained via the **USER model**. I also made the decision to use Django-allauth which added the ability to override the username field, using the email address as the login. It also brought with it the ability to verify email addresses and reset passwords. Personalised email confirmation, and email verification templates are used. 
-I created personalised Login, Sign Up, Sign out, forms with the help of crispy forms.
-Crispy forms was installed using pip3 install django-crispy-forms and then add this to the apps section in settings.py
   
-### Profiles
-Users who create accounts can store their shipping and billing informtion for a faster shopping experience using the profiles custom model. This takes in some basic information from the user when the user is completing their checkout form.
-This also allows the users to see their order history.
 
-
-## Responsive Features for smaller screens
-
+# Responsive Features for smaller screens
   - The navbar becomes compact into a hamburger menu icon for smaller screen devices
-  - Products align into columns of 2 on tablets and into columns of 1 on mobiles.
+  ![home_mobile_template](https://user-images.githubusercontent.com/97538312/221426102-3270ee21-aceb-42cc-914a-1c6691e9fe2a.png)
+  - Products align into columns of 1 on mobiles.
+![products_mobile](https://user-images.githubusercontent.com/97538312/221426121-9e9462bb-c78c-4152-8508-7d8bf8232c20.png)
+  - Add a new product (admin)
+![add_product_mobile](https://user-images.githubusercontent.com/97538312/221426170-e9336225-a50c-4800-8ef6-3b5b5f3c0181.png)
+  - Added to bag 
+  ![added_to_bag_toast_mobile](https://user-images.githubusercontent.com/97538312/221426183-9018c180-bfc8-4acc-89ac-72c5a4e5a8bf.png)
+  - Shopping bag 
+  ![bag_mobile](https://user-images.githubusercontent.com/97538312/221426193-7ca8e13c-401f-43a6-84be-a511b47a67f5.png)
+  -  Checkout page
+  ![checkout_mobile](https://user-images.githubusercontent.com/97538312/221426203-9ecf1532-c439-4d5e-ba65-736be172862e.png)
+  ![checkout_mobile_2](https://user-images.githubusercontent.com/97538312/221426213-f8a00f1a-32fe-4ed2-bb5b-4cab8c83a2e0.png)
+  - Footer 
+![footer_mobile](https://user-images.githubusercontent.com/97538312/221426226-12e50e93-4ce9-47bd-8d82-3649725b9120.png)
+  - Menu dropdown 
+![menu_dropdown_mobile](https://user-images.githubusercontent.com/97538312/221426236-f4cf0fd0-dbac-4f2c-93ad-1d9ced778d25.png)
+  - Sign in form
+  ![signin_mobile](https://user-images.githubusercontent.com/97538312/221426238-222f167f-13d7-4e57-b495-27c1149b9eb8.png)
+  - Wishlist 
+![wishlist_mobile](https://user-images.githubusercontent.com/97538312/221426248-9b67e45d-5ee9-4289-b3c9-f5670a4a221d.png)
+  - Reviews 
+  ![review_mobile](https://user-images.githubusercontent.com/97538312/221426255-c57dd933-c435-4147-9a28-668a5b685cb4.png)
+  - Add a review
+  ![add_review_mobile](https://user-images.githubusercontent.com/97538312/221426271-b9930273-834c-4ca1-9098-9d41fb024a30.png)
 
+  ## Responsiveness on tablet 
+  - Checkout 
+![checkout_tablet](https://user-images.githubusercontent.com/97538312/221426390-b71a4b22-6188-489b-9a50-96ed0e48450d.png)
+  - Product detail  
+  ![product_detail_tablet](https://user-images.githubusercontent.com/97538312/221426414-5eb0d831-453c-40d5-9ae8-077e997d8c79.png)
+  - Products 
+  ![products_tablet](https://user-images.githubusercontent.com/97538312/221426419-1ea87317-1ac6-4fe8-9ff4-45b15dec30a4.png)
+  - Profile
+  ![profile_tablet](https://user-images.githubusercontent.com/97538312/221426425-3a34905a-28be-46f5-b015-ed84421362a1.png)
+  - review detail 
+  ![review_detail_tablet](https://user-images.githubusercontent.com/97538312/221426432-7138e847-3fa5-426f-86ed-195f0280edb0.png)
+  - Terms and conditions 
+  ![terms_conditions_tablet](https://user-images.githubusercontent.com/97538312/221426445-f48cf212-9969-4cac-8d84-ed4479f7b935.png)
   
+  
+  ## Figma Template Designs (Figma and the use of frames is my preferred method of design)
+   Home template
+![home_template_design](https://user-images.githubusercontent.com/97538312/221426640-8296f459-e1b0-42d1-8132-5cef1964c2b2.jpg)
+Login template 
+![login_template_design](https://user-images.githubusercontent.com/97538312/221426644-1fd81bbb-8c99-4152-a846-e57976602afd.jpg)
+Signup template
+![signup_template_design](https://user-images.githubusercontent.com/97538312/221426651-a72dc8c6-1405-4261-aa7f-c2e364fc5770.jpg)
+Logout template
+![logout_template_design](https://user-images.githubusercontent.com/97538312/221426657-8bfce304-3b0a-4903-b9c6-8daccf768b44.jpg)
+Add a review template
+![add_review_template_design](https://user-images.githubusercontent.com/97538312/221426665-c081a171-4ac2-4384-a918-ea843527e70c.jpg)
+Edit review template
+![edit_review_template_design](https://user-images.githubusercontent.com/97538312/221426673-b34c3432-893e-4da0-acfe-4a1fe2a39c83.jpg)
+Product management template
+![product management_template_design](https://user-images.githubusercontent.com/97538312/221426680-29c9dd2a-73ab-4e2b-a2e1-1b5f2ec504c4.jpg)
+Products template 
+![products_template_design](https://user-images.githubusercontent.com/97538312/221426689-36f418e6-1195-4fe7-ae90-991c4291053c.jpg)
+Product detail template
+![product_detail_template_design](https://user-images.githubusercontent.com/97538312/221426740-57a483e7-4c40-49ea-83c9-4022558fed1d.jpg)
+Reviews template 
+![reviews_template_design](https://user-images.githubusercontent.com/97538312/221426700-ddbe122e-6771-4864-a96b-1e1b749e72a6.jpg)
+Shopping bag template
+![shopping_bag_template_design](https://user-images.githubusercontent.com/97538312/221426713-cb4dce15-720f-48e2-86d8-90e9192c5ce6.jpg)
+Wishlist template
+![wishlist_template_design](https://user-images.githubusercontent.com/97538312/221426721-2abc4129-f248-429f-987f-0939bcd01901.jpg)
+
+
+## Defensive Programming
+  -To keep the site secure and protected against an attack or attempts to access pages reserved solely based on user permission levels, defensive programming was at the forefront of the development.
+
+  - I targetted login_required functionality across relevant views and templates.
+  -On specific views.py files, I made sure to check if the user is authenticated.
+
 ## Payments
   - Stripe is used to handle payments on this website
   
