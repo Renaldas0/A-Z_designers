@@ -7,9 +7,10 @@
 
 ### I believe I produced a website that is very adaptable and can be repurposed for many ecommerce applications, this includes subscriptions and transactional services. There are numerous features which I would like to have added for submission of this project, however, due to limited time this was not possible for the moment. Live project can be found [HERE](https://a-z-designers.herokuapp.com/)
 
-If you wish to test account functionality, demo accounts have been provided below. Please note that not all error pages have been created and therefore on the occasional error the base django template will show up.
+### All documentation images can be found in the documentation folder
 
 ## Test website functionality with these accounts
+**If you wish to test account functionality, demo accounts have been provided below. Please note that not all error pages have been created and therefore on the occasional error the base django template will show up.**
 | Username | Password | Desription |
 | ----- | -------- | ---------- |
 | hodedar | 11@@11@@ | Customer account created with temp-mail and consists of multiple orders and reviews. (testing email confirmation was successful) |
@@ -17,9 +18,9 @@ If you wish to test account functionality, demo accounts have been provided belo
 
 
 ## Products and accounts with testing done to them
-- I have added some products to the wishlist on both accounts
-- A purchase has been made on the admin account that shows up in my profile
-- Reviews have been left in the NEW ARRIVALS category, on the gold womens watch, black belt and women's dress.
+- I have added some products to the **wishlist** on both accounts
+- A purchase has been made on both accounts that shows up in the **my profile** section
+- **Reviews** have been left in the NEW ARRIVALS category, on the gold womens watch, black belt and women's dress.
 
 ## Future Goals of A-Z_Designers
 A-Z_Designers' plan is to expand rapidly by adding more and more new products for sale every week.
@@ -27,7 +28,7 @@ We plan to also increase the choice of sizes, variety of products and even colou
 Add filtering by rating
 
 ## Functionality goals
-Website functionality goals we strive to achieve over the next few website launches include :
+**Website functionality goals we strive to achieve over the next few website launches include** :
 - Tracking of deliveries for users
 - Set up an efficient way for users to submit a refund request without the need to contact customer support via email or phone call.
 - Allow first time buyers a discount code to be used.
@@ -201,8 +202,8 @@ Product card displays the product image, product name, product price, category, 
 (Edit and Delete options only show for admin users)
 Further for all users the size option allows a user to select what size to get the product in and then the quantity of this product in selected size to add.
 ![product_detail_template](https://user-images.githubusercontent.com/97538312/221410456-a84bdd77-1381-4bf5-b791-8791959d1b0e.png)
-At the bottom of the product detail page, above the footer is where you can find the reviews. If there are no reviews for the product the text will show this
-The option to add a review is show to all (Logged in) users
+At the bottom of the product detail page, above the footer is where you can find the reviews. If there are no reviews for the product the text will show this.
+ The option to **add a review** is show to all (Logged in) users
 ![no_reviews_text](https://user-images.githubusercontent.com/97538312/221410723-eb009f13-b4e1-42b1-b6e6-df0bd594250f.png)
 If a product has reviews left on it, the user can click to see all reviews on a separate page [reviews]
 ![see_all_reviews_button](https://user-images.githubusercontent.com/97538312/221410467-119b1aea-5c0b-45ef-b4df-6e21774ca0b6.png)
@@ -238,7 +239,6 @@ This will take the admin to the edit product page and all existing details will 
 ![not_logged_in_myaccount](https://user-images.githubusercontent.com/97538312/221411486-0ca7dfbc-c547-4326-8489-f2a099300e3a.png)
 
 ** Account registration and login forms**
-![my_account_dropdown](https://user-images.githubusercontent.com/97538312/221409572-8001a8bc-1996-490a-8b39-64c25128de29.png)
 Sign in
 ![signin_template](https://user-images.githubusercontent.com/97538312/221411175-25738817-3664-44bf-83fd-f63f2916e52e.png)
 Register
