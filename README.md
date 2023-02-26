@@ -453,7 +453,13 @@ Wishlist template
   - For the testing process I used print statements and kept running the code after a new function was added which was noticeable when run
   - With new functionalities added I would straight away test them
   - Verified the HTML using the W3C HTML validator and all tests passed : https://validator.w3.org/
+ ![html_validation](https://user-images.githubusercontent.com/97538312/221436046-cdce6c5d-eba6-4c11-a994-da20200d3c4f.png)
   - Verified CSS using the Jigsaw w3 css validator to confirm all css is valid : https://jigsaw.w3.org/css-validator/
+  - Base.css
+  ![validation_base css](https://user-images.githubusercontent.com/97538312/221436088-e26a8475-4d27-416f-86bf-a0b8db448665.png)
+  - Profile.css
+  ![validation_profile css](https://user-images.githubusercontent.com/97538312/221436091-3ae35a71-7a7c-4941-bde5-8aa344217a89.png)
+
   - Tested the python code by running it through PEP8 online :  http://pep8online.com/
   - I cleared up as many Python minor errors as possible
   - The only remaining errors were to indicate that the line is too long
