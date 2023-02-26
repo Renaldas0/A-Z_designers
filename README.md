@@ -362,50 +362,51 @@ After successful checkout , a success message shows and a checkout summary
 
   
 
-# Responsive Features for smaller screens
-  - The navbar becomes compact into a hamburger menu icon for smaller screen devices
-  ![home_mobile_template](https://user-images.githubusercontent.com/97538312/221426102-3270ee21-aceb-42cc-914a-1c6691e9fe2a.png)
-  - Products align into columns of 1 on mobiles.
+# Responsiveness on mobile
+- The navbar becomes compact into a hamburger menu icon for smaller screen devices
+![home_mobile_template](https://user-images.githubusercontent.com/97538312/221426102-3270ee21-aceb-42cc-914a-1c6691e9fe2a.png)
+- Products align into columns of 1 on mobiles.
 ![products_mobile](https://user-images.githubusercontent.com/97538312/221426121-9e9462bb-c78c-4152-8508-7d8bf8232c20.png)
-  - Add a new product (admin)
+- Add a new product (admin)
 ![add_product_mobile](https://user-images.githubusercontent.com/97538312/221426170-e9336225-a50c-4800-8ef6-3b5b5f3c0181.png)
-  - Added to bag 
-  ![added_to_bag_toast_mobile](https://user-images.githubusercontent.com/97538312/221426183-9018c180-bfc8-4acc-89ac-72c5a4e5a8bf.png)
-  - Shopping bag 
-  ![bag_mobile](https://user-images.githubusercontent.com/97538312/221426193-7ca8e13c-401f-43a6-84be-a511b47a67f5.png)
-  -  Checkout page
-  ![checkout_mobile](https://user-images.githubusercontent.com/97538312/221426203-9ecf1532-c439-4d5e-ba65-736be172862e.png)
-  ![checkout_mobile_2](https://user-images.githubusercontent.com/97538312/221426213-f8a00f1a-32fe-4ed2-bb5b-4cab8c83a2e0.png)
-  - Footer 
+- Added to bag 
+![added_to_bag_toast_mobile](https://user-images.githubusercontent.com/97538312/221426183-9018c180-bfc8-4acc-89ac-72c5a4e5a8bf.png)
+- Shopping bag 
+![bag_mobile](https://user-images.githubusercontent.com/97538312/221426193-7ca8e13c-401f-43a6-84be-a511b47a67f5.png)
+-  Checkout page
+![checkout_mobile](https://user-images.githubusercontent.com/97538312/221426203-9ecf1532-c439-4d5e-ba65-736be172862e.png)
+![checkout_mobile_2](https://user-images.githubusercontent.com/97538312/221426213-f8a00f1a-32fe-4ed2-bb5b-4cab8c83a2e0.png)#
+
+  **Footer** 
 ![footer_mobile](https://user-images.githubusercontent.com/97538312/221426226-12e50e93-4ce9-47bd-8d82-3649725b9120.png)
-  - Menu dropdown 
+- Menu dropdown 
 ![menu_dropdown_mobile](https://user-images.githubusercontent.com/97538312/221426236-f4cf0fd0-dbac-4f2c-93ad-1d9ced778d25.png)
-  - Sign in form
-  ![signin_mobile](https://user-images.githubusercontent.com/97538312/221426238-222f167f-13d7-4e57-b495-27c1149b9eb8.png)
-  - Wishlist 
+- Sign in form
+![signin_mobile](https://user-images.githubusercontent.com/97538312/221426238-222f167f-13d7-4e57-b495-27c1149b9eb8.png)
+- Wishlist 
 ![wishlist_mobile](https://user-images.githubusercontent.com/97538312/221426248-9b67e45d-5ee9-4289-b3c9-f5670a4a221d.png)
-  - Reviews 
-  ![review_mobile](https://user-images.githubusercontent.com/97538312/221426255-c57dd933-c435-4147-9a28-668a5b685cb4.png)
-  - Add a review
-  ![add_review_mobile](https://user-images.githubusercontent.com/97538312/221426271-b9930273-834c-4ca1-9098-9d41fb024a30.png)
+- Reviews 
+![review_mobile](https://user-images.githubusercontent.com/97538312/221426255-c57dd933-c435-4147-9a28-668a5b685cb4.png)
+- Add a review
+![add_review_mobile](https://user-images.githubusercontent.com/97538312/221426271-b9930273-834c-4ca1-9098-9d41fb024a30.png)
 
   ## Responsiveness on tablet 
-  - Checkout 
+- Checkout 
 ![checkout_tablet](https://user-images.githubusercontent.com/97538312/221426390-b71a4b22-6188-489b-9a50-96ed0e48450d.png)
-  - Product detail  
-  ![product_detail_tablet](https://user-images.githubusercontent.com/97538312/221426414-5eb0d831-453c-40d5-9ae8-077e997d8c79.png)
-  - Products 
-  ![products_tablet](https://user-images.githubusercontent.com/97538312/221426419-1ea87317-1ac6-4fe8-9ff4-45b15dec30a4.png)
-  - Profile
-  ![profile_tablet](https://user-images.githubusercontent.com/97538312/221426425-3a34905a-28be-46f5-b015-ed84421362a1.png)
-  - review detail 
-  ![review_detail_tablet](https://user-images.githubusercontent.com/97538312/221426432-7138e847-3fa5-426f-86ed-195f0280edb0.png)
-  - Terms and conditions 
-  ![terms_conditions_tablet](https://user-images.githubusercontent.com/97538312/221426445-f48cf212-9969-4cac-8d84-ed4479f7b935.png)
+- Product detail  
+![product_detail_tablet](https://user-images.githubusercontent.com/97538312/221426414-5eb0d831-453c-40d5-9ae8-077e997d8c79.png)
+- Products 
+![products_tablet](https://user-images.githubusercontent.com/97538312/221426419-1ea87317-1ac6-4fe8-9ff4-45b15dec30a4.png)
+- Profile
+![profile_tablet](https://user-images.githubusercontent.com/97538312/221426425-3a34905a-28be-46f5-b015-ed84421362a1.png)
+- review detail 
+![review_detail_tablet](https://user-images.githubusercontent.com/97538312/221426432-7138e847-3fa5-426f-86ed-195f0280edb0.png)
+- Terms and conditions 
+![terms_conditions_tablet](https://user-images.githubusercontent.com/97538312/221426445-f48cf212-9969-4cac-8d84-ed4479f7b935.png)
   
   
-  ## Figma Template Designs (Figma and the use of frames is my preferred method of design)
-   Home template
+## Figma Template Designs (Figma and the use of frames is my preferred method of design)
+Home template
 ![home_template_design](https://user-images.githubusercontent.com/97538312/221426640-8296f459-e1b0-42d1-8132-5cef1964c2b2.jpg)
 Login template 
 ![login_template_design](https://user-images.githubusercontent.com/97538312/221426644-1fd81bbb-8c99-4152-a846-e57976602afd.jpg)
@@ -445,19 +446,19 @@ Wishlist template
   
   
 ## Testing 
-- For the testing process I used print statements and kept running the code after a new function was added which was noticeable when run
-- With new functionalities added I would straight away test them
-- Verified the HTML using the W3C HTML validator and all tests passed : https://validator.w3.org/
-- Verified CSS using the Jigsaw w3 css validator to confirm all css is valid : https://jigsaw.w3.org/css-validator/
-- Tested the python code by running it through PEP8 online :  http://pep8online.com/
-- I cleared up as many Python minor errors as possible
-- The only remaining errors were to indicate that the line is too long
-- JsHint was used to check JavaScript code : https://jshint.com/
+  - For the testing process I used print statements and kept running the code after a new function was added which was noticeable when run
+  - With new functionalities added I would straight away test them
+  - Verified the HTML using the W3C HTML validator and all tests passed : https://validator.w3.org/
+  - Verified CSS using the Jigsaw w3 css validator to confirm all css is valid : https://jigsaw.w3.org/css-validator/
+  - Tested the python code by running it through PEP8 online :  http://pep8online.com/
+  - I cleared up as many Python minor errors as possible
+  - The only remaining errors were to indicate that the line is too long
+  - JsHint was used to check JavaScript code : https://jshint.com/
 
 ### Manual Testing
-- I manually tested that **errors in the form fields** show up and required fields cannot be left empty.
-- Tested that messages get displayed when Logging in, adding to the bag, making any adjustments to products, on successfull or failed checkout, leaving a review, editing a review, adding products to a wishlist and signing out.
-- Toasts successfully showed up in all occassions
+  - I manually tested that **errors in the form fields** show up and required fields cannot be left empty.
+  - Tested that messages get displayed when Logging in, adding to the bag, making any adjustments to products, on successfull or failed checkout, leaving a review,   editing a review, adding products to a wishlist and signing out.
+  - Toasts successfully showed up in all occassions
 
 #### Message Testing / Toasts
 Alert Message
