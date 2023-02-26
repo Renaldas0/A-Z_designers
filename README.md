@@ -121,7 +121,7 @@ bags, watches, luxury watches, high quality clothing, designer clothes, new, tre
     View our range of affordable, high quality and trending selection of clothing and accessories including watches, belts and bags!"
 
 
-## **Site Features**
+## Site Features
   - Home page with a minimalistic design which allows users to know they are on a clothing website
   - Clicking on the heading will take the user back to the home page
   - Easy to use Navigation menu with an easy to read layout
@@ -151,7 +151,7 @@ bags, watches, luxury watches, high quality clothing, designer clothes, new, tre
   - View the recently created review in a review_detail page
   - Go to specific product from the wishlist or remove the product
 
-- **User Features** 
+## User Features
   - Fully functioning front end website for users to view products for sale.
   - Ability to register an account and login/logout.
   - Ability for users to place products into their shopping bag and store them there for a while.
@@ -166,17 +166,8 @@ bags, watches, luxury watches, high quality clothing, designer clothes, new, tre
   - Anonymous checkout for users who do not wish to register.
   - Account information for shipping can be saved by users in their profile page (bug in saving this information with checkout form explained in bugs section)
   - Profile information will fill in the checkout form with existing info.
-  
- **Reviews**
-  - The option to leave a review displays a text that a user must first log in to an account to leave a review and when clicked on will redirect to the login form
-  - All reviews can still be read by the anonymous user
- **Checkout**
-  - Checkout information will not be saved as there is no way of tracking the user making a purchase
- **Wishlist**
-  - Wishlist is not accessible as it only displays in the menu to logged in users
-  - 
 
-- **Admin Features**
+## Admin Features
   - Access to the admin panel where all users, profiles and orders can be seen and managed
   - Adding of new products and users in the admin panel
   - Access to product management within the website
@@ -198,14 +189,14 @@ My account dropdown menu for (admin) and display total product price in the bag
 Footer that spans across all website pages
 ![footer](https://user-images.githubusercontent.com/97538312/221409721-464e2dba-da33-4d52-afc9-8991e61b7c22.png)
 
-##Products
+## Products
 Edit and delete options only show up for (admin)
 ![products_template](https://user-images.githubusercontent.com/97538312/221410046-3c04cd54-371d-4dd8-8f79-bde7ccf39552.png)
 ![products_template_2](https://user-images.githubusercontent.com/97538312/221410049-5d2fe91c-8fce-406f-bd50-06f90a17d2b6.png)
 Products to not logged in users and to logged in users without staff or admin status
 ![products_logged_out](https://user-images.githubusercontent.com/97538312/221410177-5408a16a-7b5d-46a4-bb6d-9b94682e2b1d.png)
 
-##Product Detail
+## Product Detail
 Product card displays the product image, product name, product price, category, materials, colour and a description
 (Edit and Delete options only show for admin users)
 Further for all users the size option allows a user to select what size to get the product in and then the quantity of this product in selected size to add.
@@ -217,21 +208,21 @@ If a product has reviews left on it, the user can click to see all reviews on a 
 ![see_all_reviews_button](https://user-images.githubusercontent.com/97538312/221410467-119b1aea-5c0b-45ef-b4df-6e21774ca0b6.png)
 
 
-##Edit Product (admin only)
+## Edit Product (admin only)
 The admin has the ability to edit a selected products details directly from the product detail page by clicking **edit product** button
 This will take the admin to the edit product page and all existing details will already be shown
 ![edit_existing_product](https://user-images.githubusercontent.com/97538312/221410830-a6c8812e-ac7a-48d9-a8e0-924c20970781.png)
 
-##Delete Product (admin only)
+## Delete Product (admin only)
   This will remove the product from the website display AND the database completely and irreversibly.
   
-##Product Management (admin only)
+## Product Management (admin only)
  This allows the admin to add new products from scratch without accessing the admin panel
  It will add the product to the website in the appropriate category and to the database
 ![add_product_template](https://user-images.githubusercontent.com/97538312/221410960-49b48fcd-111a-4ac0-b1ce-425fb46af32c.png)
 ![add_product_template_2](https://user-images.githubusercontent.com/97538312/221410963-cab90658-019a-4520-b767-84791eed6dd3.png)
 
-##My account
+## My account
 **Logged in users (not admin or staff)**
   - My account will display the options to Access their profile
   - Access the wishlist
@@ -239,11 +230,11 @@ This will take the admin to the edit product page and all existing details will 
 ![my_account_dropdown](https://user-images.githubusercontent.com/97538312/221411597-0bf01207-64b6-428b-8837-5563ede29b03.png)
 
 **Logged in as (admin)
-  - Product Management on top of other options
+ Product Management on top of other options
 ![admin_my_account](https://user-images.githubusercontent.com/97538312/221411584-5470b72f-3bc2-4e9a-ad51-61b913c955b9.png)
 
 **Not logged in**
-  - My account offers a selection of register or login options for non logged in users and does not display the wishlist, profile or product management options (admin only)
+ My account offers a selection of register or login options for non logged in users and does not display the wishlist, profile or product management options (admin only)
 ![not_logged_in_myaccount](https://user-images.githubusercontent.com/97538312/221411486-0ca7dfbc-c547-4326-8489-f2a099300e3a.png)
 
  ![my_account_dropdown](https://user-images.githubusercontent.com/97538312/221409572-8001a8bc-1996-490a-8b39-64c25128de29.png)
@@ -261,13 +252,28 @@ Confirm Email
 ![confirm_email_template](https://user-images.githubusercontent.com/97538312/221411698-2fe9ae9f-f531-4a81-aff3-34fedcb358d7.png)
 
 
+
+
+
+
+
+
+
+
+
+
 **Reviews**
   - Logged in users can leave a review at the bottom left side of the product detail page
   ![no_reviews_text](https://user-images.githubusercontent.com/97538312/221409639-cebb6a67-509e-4fc2-b56f-e77d017c3b94.png)
 
-
- 
- 
+**Reviews**
+  - The option to leave a review displays a text that a user must first log in to an account to leave a review and when clicked on will redirect to the login form
+  - All reviews can still be read by the anonymous user
+ **Checkout**
+  - Checkout information will not be saved as there is no way of tracking the user making a purchase
+ **Wishlist**
+  - Wishlist is not accessible as it only displays in the menu to logged in users
+  - 
  
 #### Accounts
 
@@ -286,86 +292,12 @@ This also allows the users to see their order history.
   - Products align into columns of 2 on tablets and into columns of 1 on mobiles.
 
   
- -**Stripe**
+## Payments
   - Stripe is used to handle payments on this website
   
-## Main section
-![main-screenshot](https://user-images.githubusercontent.com/97538312/201192933-98a6b956-1bc9-43e9-84d8-8ba22933ffd2.jpg)
-  - The landing page is designed to immediately inform a user that they are on a golf website
-  - Provide an easy UI and UX with it's easy to read design
-  - The button in the middle takes the user down to the next section
-
-## Navbar to not logged in users 
-  - Log in and register options are available
-  - Manage bookings does not show up 
-  - Log out option is not shown
-  
-![nav_not_logged_in](https://user-images.githubusercontent.com/97538312/204134958-fe247587-a0fe-441e-afae-74adcf072acd.jpg)
-
-## Navbar to logged in users
-  - Option to make a booking
-  - Option to manage bookings
-  - Login and Register are now hidden
-  - Logout option is visible
-  
-![logged_in_nav](https://user-images.githubusercontent.com/97538312/204134974-443be7a9-cb17-4560-91aa-b48721dd5ceb.jpg)
-
-## About Us
-![about-us](https://user-images.githubusercontent.com/97538312/204131322-e8051a0d-a255-43f4-950d-f753532350f2.jpg)
-  - In this section a user is informed about the mission of the ImproveYourGolf company
 
 
-- **Classes**
-  - The classes section is designed to look different for authenticated users and those who are not logged in
-  - If a user is not logged in then a message at the bottom of the class description appears to inform a user they must first login
-  - When a user logs in this message disappears and the 'Book Now' button appears
-  - The responsive features set the columns to align from 3 across to a 2,1 layout and then in a row formation for mobile devices
-  - Each class has a different image to indicate the type of lesson to expect
 
-## Classes when not logged in 
-![classes_notauth](https://user-images.githubusercontent.com/97538312/201193183-2252d2ed-a915-4d1d-b734-fa61ae8fb172.jpg)
-
-## Classes to logged in viewers 
-  - The book now button is shown
-  
-![classes_auth](https://user-images.githubusercontent.com/97538312/201193253-d616c879-8851-4726-9fb6-ada64418b095.jpg)
-
-
-- **Register & Login Forms**
-  - When the register or login option is selected by the user, they are redirected to the form page.
-  - These forms are of very simplistic design for easy and satisfying user experience.
-  - Both forms are designed to look the same and contain the same navbar and footer elements as on the main page.
-
-## Register form
-![signup](https://user-images.githubusercontent.com/97538312/204099776-1019a34c-b1ba-4175-a117-291956594794.jpg)
-
-## Sign in form
-![sign-in-screenshot](https://user-images.githubusercontent.com/97538312/202302531-b3fa0508-89ad-47df-8140-16c6126b0bef.jpg)
-
-## Sign out
-![sign_out](https://user-images.githubusercontent.com/97538312/204134892-8879b46d-5a4c-4626-bde8-5c34179e3c11.jpg)
-
-
-## Booking
-  - The booking system required a database to store in formation. For this 3 models were created. They store, Customer, Classes and the Booking details.
-  - The booking page consists of a form which is made using crispy forms
-  - The user must input their name, email, requested class and requested date
-  - Once this is done if the fields are correct the form is recorded in the database
-  - When booking, a user must enter the exact same username and email they used for signup or the booking may fail
-![booking-page](https://user-images.githubusercontent.com/97538312/203824345-9ed984e1-9236-43f5-b7b9-35d97e2bd7ae.jpg)
-  - The use of a calendar with the help of Jquery is in place for easy date selection 
-  ![calendar](https://user-images.githubusercontent.com/97538312/204099599-90ea3c12-3f52-48d8-8dac-d4f8b5a07831.jpg)
-
-
-## Manage Bookings
-  - Users can see their made bookings in the manage bookings section
-  - If no bookings are reorded by the user, they are redirected to the booking page
-  - When a user wants to delete their booking an extra modal pops up to confirm this 
-  - The bookings are displayed in Rows and 2 bookings show up per row
-  ![booking_display](https://user-images.githubusercontent.com/97538312/204134931-d87036da-f066-44c6-823b-433af0dd653f.jpg)
-
-  
-  
 ## Unfixed Bugs 
   
   
@@ -379,43 +311,16 @@ This also allows the users to see their order history.
 - I manually tested that errors in the form fields show up and required fields cannot be left empty
 - Tested that messages get displayed when Logging in, adding to the bag, making any adjustments to products, on successfull or failed checkout and signing out.
 
-## Message Testing / Toasts
+### Message Testing / Toasts
 
 
-## Form field testing 
+### Form field testing 
 ![email_field_test](https://user-images.githubusercontent.com/97538312/204099630-8446fcaa-fc3a-42c9-a040-fe2ebcc00e19.jpg)
 
-## Lighthouse test 
+### Lighthouse test 
 ![lighthouse](https://user-images.githubusercontent.com/97538312/204099655-1f7ccfd5-edce-49d2-9a56-dc051040ef09.jpg)
 
-## Webhook test / Stripe
 
-## Checkout test
-
-## Bag test
-
-## Profile Information update test
-
-## Design
- **The website was designed using Photoshop**
- - Please note that the final product does differ from the early-stage mockups
-
- ## Design Images
-
- 
- ## Main page
-
-## Products
-
-## Product details / Individual product
-
-## Register form
-
-## Product management
-
-## Bag
-
-## Checkout
 
 
 
