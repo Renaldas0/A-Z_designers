@@ -5,9 +5,9 @@
 
 ### [A-Z_Designers](https://a-z-designers.herokuapp.com/) is my final milestone project at Code Institute and it is a full stack E-Commerce website developed to be a website for an online clothing store. This website allows users to purchase clothing that is in stock as Anonymous users and even create an account which allows them to save shipping/billing details and previous orders. This project demonstrates my learning and understanding throughout the course of full stack website development.
 
-### I believe I produced a website that is very adaptable and can be repurposed for many ecommerce applications, this includes subscriptions and transactional services. There are numerous features which I would like to have added for submission of this project, however, due to limited time this was not possible for the moment. Live project can be found [HERE](https://a-z-designers.herokuapp.com/)
+I believe I produced a website that is very adaptable and can be repurposed for many ecommerce applications, this includes subscriptions and transactional services. There are numerous features which I would like to have added for submission of this project, however, due to limited time this was not possible for the moment. Live project can be found [HERE](https://a-z-designers.herokuapp.com/)
 
-### All documentation images can be found in the documentation folder
+**All documentation images can be found in the documentation folder**
 
 ## Test website functionality with these accounts
 **If you wish to test account functionality, demo accounts have been provided below. Please note that not all error pages have been created and therefore on the occasional error the base django template will show up.**
@@ -56,8 +56,8 @@ Add filtering by rating
   - When an issue is completed it gets moved from the in progress table to the completed table 
   - Completed issues also get marked as 'closed'
   
-  ### Github Projects
- GitHub Projects was used to manage the development of the site. It allowed me to break down large issues into smaller issues and focus on these while building it up to the completed project. I also used labels to distinguish the issues which are part of the setup, of the documentation, the must haves and which are not as important.
+### Github Projects
+GitHub Projects was used to manage the development of the site. It allowed me to break down large issues into smaller issues and focus on these while building it up to the completed project. I also used labels to distinguish the issues which are part of the setup, of the documentation, the must haves and which are not as important.
   ![github_issues](https://user-images.githubusercontent.com/97538312/221426841-9e2d6388-d29f-4886-9d34-8120c333792e.png)
  Closed Isssues
  ![closed_issues](https://user-images.githubusercontent.com/97538312/221426834-f8c7edd6-69f7-49bc-9c93-fc5d89167623.png)
