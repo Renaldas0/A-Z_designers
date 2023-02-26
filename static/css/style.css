@@ -270,6 +270,14 @@ select option [value=""] {
     .input-group-prepend {
         display: none;
     }
+
+    .wishlist-th {
+        font-size: 10px;
+    }
+
+    .wishlist-td-text {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width:350px) {

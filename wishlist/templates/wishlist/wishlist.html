@@ -13,15 +13,16 @@
 {% endblock %}
 
 {% block content %}
+
+{% if wishlist %}
 <div class="row">
-    {% if wishlist %}
     <div class="table-responsive rounded-0">
         <table class="table wishlist-table wishlist-table-lg text-align-center ml-1">
             <thead class="wishlist-thead">
                 <tr class="wishlist-tr wishlist-tr-lg mx-1 my-1">
                     <th class="col-md-3 wishlist-th brand-font-alt">Product Image</th>
                     <th class="wishlist-th brand-font-alt">Product Name</th>
-                    <th class="wishlist-th brand-font-alt">Price</th>
+                    <th class="wishlist-th brand-font-alt">Price €</th>
                     <th class="wishlist-th brand-font-alt">Shop Now</th>
                     <th class="wishlist-th brand-font-alt">Remove</th>
                 </tr>
@@ -39,24 +40,26 @@
                         {% endif %}
                     </td>
                     <td class="wishlist-td" data-label="Name:">
-                        <p class="h6 brand-font-alt">{{ product.product.name }}</p>
+                        <p class="h6 wishlist-td-text">{{ product.product.name }}</p>
                     </td>
                     <td class="wishlist-td" data-label="Price:">
                         <div>
-                            <p class="mb-0 pb-1"><span class="text-left h5 brand-font">€
+                            <p class="mb-0 pb-1 wishlist-td-text"><span class="text-left h5">
                                     {{ product.product.price }}</span></p>
                         </div>
                     </td>
                     <td class="wishlist-td" data-label="Shop Now: ">
                         <!-- Go straight to this product in the product detail page  -->
-                        <a class="text-decoration-none" href="{% url 'product_detail' product.product.id %}"
+                        <a class="text-decoration-none wishlist-td-text"
+                            href="{% url 'product_detail' product.product.id %}"
                             aria-label="link to product detail">Take me there
-                            <span class="icon"><i class="ml-1 fas fa-shopping-bag"></i></span>
+                            <span class="icon ml-1"><i class="fas fa-shopping-bag"></i></span>
                         </a>
                     </td>
                     <!-- Remove Product from wishlist -->
                     <td class="wishlist-td" data-label="Remove: ">
-                        <a class="text-decoration-none" href="{% url 'remove_from_wishlist' product.product.id %}"
+                        <a class="text-decoration-none wishlist-td-text"
+                            href="{% url 'remove_from_wishlist' product.product.id %}"
                             aria-label="remove product from wishlist">Remove from wishlist
                             <span class="icon"><i class="ml-1 fas fa-trash"></i></span>
                         </a>
@@ -66,8 +69,15 @@
             </tbody>
         </table>
     </div>
-    {% endif %}
 </div>
+{% else %}
+<div class="row h-100">
+    <div class="col">
+        <p>Your wishlist is currently empty. Add products to your wishlist to see them here! <a class="button btn-sm"
+                href="{% url 'products' %}">Go back</a></p>
+    </div>
+</div>
+{% endif %}
 <div class="col-3">
     <a href="{% url 'products' %}"><button class="button">Return to shopping <span class="icon ml-1"><i
                     class="fa fa-chevron-left"></i></span></button></a>
@@ -77,7 +87,6 @@
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
         </a>
     </div>
-
 </div>
 
 {% endblock %}
