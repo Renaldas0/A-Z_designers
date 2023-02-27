@@ -441,6 +441,10 @@ Wishlist template
 
   - I targetted login_required functionality across relevant views and templates.
   -On specific views.py files, I made sure to check if the user is authenticated.
+  
+  Use of Modal to prevent accidental removal of products or reviews
+  ![modal_test](https://user-images.githubusercontent.com/97538312/221537445-545db1a4-a98b-43e0-b81e-0baf2dc7a333.png)
+
 
 ## Payments
   - Stripe is used to handle payments on this website
@@ -510,10 +514,15 @@ Z-A sorting
 
 
 ### Form field testing 
-![email_field_test](https://user-images.githubusercontent.com/97538312/204099630-8446fcaa-fc3a-42c9-a040-fe2ebcc00e19.jpg)
+![checkout_form_test](https://user-images.githubusercontent.com/97538312/221536635-af5492f3-7e61-41c1-89e4-7652977ae750.png)
+![required_field_test](https://user-images.githubusercontent.com/97538312/221536724-a1eda3b4-2e66-4289-84c1-c9b5b053ebde.png)
+![invalid_card_test](https://user-images.githubusercontent.com/97538312/221536779-3dfecc77-cae1-4440-b6e8-7055de2f0ff2.png)
+
 
 ### Lighthouse test 
-![lighthouse](https://user-images.githubusercontent.com/97538312/204099655-1f7ccfd5-edce-49d2-9a56-dc051040ef09.jpg)
+Lighthouse tests revealed a slight lack in SEO, accessibility and best practices
+However the performance aspect is doing very well, more optimization will be done by refactoring image sizes and quality in the future
+![Screenshot (245)](https://user-images.githubusercontent.com/97538312/221538688-3a2c7888-8e3f-4a8f-a14f-aae2c4eeae0e.png)
 
 
 ## Deployment 
@@ -571,6 +580,8 @@ Z-A sorting
   - Horizontal scroll bar appears on the wishlist page, I attempted to set overflow and width rules but was unable to fix this thus far.
   - In the bag page if the bag is empty, the footer is just below the div and does not stay at the bottom of the page. I attempted to set a height to the body and to the div containing the empty bag text but this didn't work or made the layout much worse when a product was then added to the bag. 
   - I will continue to work on these issues for the next release but the scheduled release of the website for the 27th of February did not allow enough time.
+Favicon error
+![favicon_error](https://user-images.githubusercontent.com/97538312/221536904-50bd482f-59ee-4d45-8cc4-e0cc60e9c254.png)
 
 
 ## Credits
