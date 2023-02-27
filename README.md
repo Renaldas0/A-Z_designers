@@ -129,10 +129,32 @@ mens clothes, t-shirts, trousers, pants, sale, fashion, new style, new collectio
 bags, watches, luxury watches, high quality clothing, designer clothes, new, trending, delivery, shipping"
   - Meta tags for description : "A-Z_Designers is an online shop for your clothing desires and needs.
     View our range of affordable, high quality and trending selection of clothing and accessories including watches, belts and bags!"
+
+## Marketing Strategy for A-Z_Designers
+Overview: Our e-commerce clothing business aims to provide trending, high quality yet affordable clothing for fashion-conscious consumers. To achieve our business goals, we will focus on the following marketing strategies:
+  - Social Media Marketing: We will leverage social media platforms such as Facebook, to showcase our products and engage with our target audience. Our social media strategy will include creating visually appealing content, using relevant hashtags, and collaborating with influencers to promote our brand.
+  - Email Marketing: We will use email marketing to reach out to our existing customers and potential new customers. Our email marketing strategy will include creating personalized emails with exclusive discounts, offering coupon codes, and sending newsletters highlighting new arrivals and sales (with users consent).
+  - Search Engine Optimization (SEO): Will optimize our website for search engines to increase our online visibility and drive traffic to our website. Our SEO strategy will include *keyword research*, optimizing product *descriptions* and images, and creating a blog with relevant content in the near future.
+  - Paid Advertising: With Business growth prominent we will aim to use Paid Advertising to push our Business out to more users. This will huegly help us get more recognition.
+  - Referral Marketing: We will incentivize our existing customers to refer their friends and family to our business. Our referral marketing strategy will include offering discounts or rewards for referrals and creating a seamless referral process for our customers.(Coming in the near future)
     
  ## Database ERD (Entity relationship diagram)
 This ER diagram captures the relationships between real-world entities. The entities are the data points of objects such as persons, places and things and together with their attributes, compose their domain, ie, their individual table.
+This is a representation of our completed database system layout.
+ Diagram created in [LucidChart](https://www.lucidchart.com/pages/)
 ![Screenshot (236)](https://user-images.githubusercontent.com/97538312/221423917-0e30f06f-d14b-44cd-a229-2dba1a4c5171.png)
+
+## Database design 
+First of all I identified the purpose of the database by gathering information on how a typical day to day user will use A-Z_Designers webiste for shopping.
+This was done by interviewing users on their day to day shopping needs and the functionality they expect from an ecommerce website.
+This allowed for the creating of USER STORIES in the Github Project section.
+Additionally, more research was gathered by researching similar Businesses to determine what features we cannot leave out. Businesses used for comparison included: Balenciaga,
+ASOS, ZARA, Zalando and addidas.
+
+Secondly the data was organized into tables to help determine the database structure as displayed in the ERD (Entity Relationship Diagram) above.
+These tables are the visual representation of the data that completed the database for this project.
+
+As an ECommerce store we heavily focused on CRUD (Create, Read, Update and Delete) functionality for our database and brought this into the website for easy access to admin users.
 
 ## Data Modelling
 Each of the models below are used for the project and contain the fields and behaviours of the data being created and stored.
