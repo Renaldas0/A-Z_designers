@@ -88,13 +88,41 @@
                                     {% endif %}
                                     {% if request.user.is_superuser %}
                                     <small class="ml-2">
-                                        <a class="btn-warning button my-2 mr-1"
+                                        <a class="text-warning button my-2 mr-1"
                                             href="{% url 'edit_product' product.id %}">Edit
                                             Product</a>
-                                        <a class="btn-danger button my-2 ml-1"
-                                            href="{% url 'delete_product' product.id %}">Delete
-                                            Product</a>
+                                        <button class="text-danger button my-2 ml-1" data-toggle="modal"
+                                            data-target="#modal-{{ product.id }}">Delete
+                                            Product</button>
                                     </small>
+                                    <!-- Start of Modal -->
+                                    <!-- Modal https://getbootstrap.com/docs/4.0/components/modal/ -->
+                                    <div id="modal-{{ product.id }}" class="modal fade" tabindex="-1" role="dialog"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Are you sure?</h5>
+                                                    <button type="button" class="btn close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true"><i
+                                                                class="far fa-times-circle"></i></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure you want to delete this product?
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="button btn-warning close"
+                                                        data-dismiss="modal">Cancel</button>
+                                                    <a href="{% url 'delete_product' product.id %}"
+                                                        class="button btn-danger">Yes,
+                                                        Delete</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Modal -->
                                     {% endif %}
                                 </div>
                             </div>
@@ -169,5 +197,15 @@
             window.location.replace(currentUrl);
         }
     })
+    // Opens the modal on delete_product
+    function deleteModal() {
+        $("#delete-product").on('click', function () {
+            $('#confirmationModal').modal('show');
+        });
+
+        $(".close").on('click', function () {
+            $('#confirmationModal').modal('hide');
+        });
+    }
 </script>
 {% endblock %}
